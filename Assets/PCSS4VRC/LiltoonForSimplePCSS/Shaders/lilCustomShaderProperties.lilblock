@@ -1,0 +1,12 @@
+        //----------------------------------------------------------------------------------------------------------------------
+        // Custom Properties
+        //_CustomVariable ("Custom Variable", Float) = 0
+
+
+        SimplePCSS_Softness("SimplePCSS_Softness", Range(0, 1)) = 0.015
+        SimplePCSS_SoftnessFalloff("SimplePCSS_SoftnessFalloff", Range(0, 1)) = 1.0
+
+        _MaskTex("Mask", 2D) = "white" {}
+        [Toggle(USE_MASK_TEX)]_UseMaskTex ("UseMaskTex", Float) = 0
+        ShadowNormalBias("ShadowNormalBias", Range(0,0.1)) = 0
+        _EnvLightStrength("EnvironmentLightStrength", Range(0,1)) = 0.3

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EXMenu_Mafuyu_FT
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Body
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 2
+    style: 0
+    subMenu: {fileID: 11400000, guid: 3c020ed1b8bb2444493605ad368b7569, type: 2}
+    subParameters: []
+    labels: []
+  - name: Face
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: c2a26f2918deba0499e0df755f7ab51b, type: 2}
+    subParameters: []
+    labels: []
+  - name: Hair
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: adaa9467bd2a3ca49a0d678556981c77, type: 2}
+    subParameters: []
+    labels: []
+  - name: Costume
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 9c8c493f820ba9749b08c27fb21bcc85, type: 2}
+    subParameters: []
+    labels: []
+  - name: Settings
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: dc9887ae197710140a58d2e649fa8a8f, type: 2}
+    subParameters: []
+    labels: []
+  - name: FacialTracking
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 3e642f636f164cd409435fd938664c19, type: 2}
+    subParameters: []
+    labels: []

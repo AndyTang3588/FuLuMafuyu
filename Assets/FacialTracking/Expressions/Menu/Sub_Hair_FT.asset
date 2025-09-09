@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Sub_Hair_FT
+  m_EditorClassIdentifier: 
+  controls:
+  - name: "\u30D8\u30A2\u30B9\u30BF\u30A4\u30EB\u5909\u66F4"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 11f39289dbb8efe47834723918286dea, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\u30B1\u30E2\u8033 ON/OFF"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 345b5d2956b15874e82a6c9907f4d4b5, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\u524D\u9AEA\u3071\u3063\u3064\u3093"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 9d6493c037fad8c4fbd8755f8c238cf0, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\u9AEA\u306E\u843D\u3061\u5F71 \u6D88\u53BB"
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 63a023d341f6fc24487bbe92dd494859, type: 2}
+    subParameters: []
+    labels: []

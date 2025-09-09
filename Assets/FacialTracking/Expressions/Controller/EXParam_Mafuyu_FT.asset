@@ -1,0 +1,570 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: EXParam_Mafuyu_FT
+  m_EditorClassIdentifier: 
+  parameters:
+  - name: GestureLock
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: FXL
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: Apron_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Apron_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Shoes_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Shoes_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Loosesocks_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Loosesocks_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: LoosesocksLong_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: LoosesocksLong_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Katyusha_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Katyusha_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Ear_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Ear_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hairstyle_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Hairstyle_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: HairPattun_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: HairPattun_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: HairShadow_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: HairShadow_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Spats_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Spats_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Highlight_ON
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Highlight_OFF
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: BreastSize
+    valueType: 1
+    saved: 1
+    defaultValue: 0.5
+    networkSynced: 1
+  - name: EyeTrackingActive
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: LipTrackingActive
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: GestureExpressionsDisabled
+    valueType: 2
+    saved: 1
+    defaultValue: 1
+    networkSynced: 1
+  - name: v2/EyeLidLeft
+    valueType: 1
+    saved: 0
+    defaultValue: 0.75
+    networkSynced: 1
+  - name: v2/EyeLidRight
+    valueType: 1
+    saved: 0
+    defaultValue: 0.75
+    networkSynced: 1
+  - name: v2/EyeLeftX
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeRightX
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeY
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawOpen
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthClosed
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueOut
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipPucker
+    valueType: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: QPro/Tongue_Toggle
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: Eye Lid LR Sync
+    valueType: 2
+    saved: 1
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthUpperUp1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthUpperUp2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthUpperUp4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthUpperUp8
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthLowerDown1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthLowerDown2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthLowerDown4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintLeft1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintLeft2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintLeft4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintRight1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintRight2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/EyeSquintRight4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadLeftNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadLeft1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadLeft2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadLeft4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadLeft8
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadRightNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadRight1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadRight2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadRight4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/SmileSadRight8
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawXNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawX1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawX2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawX4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthXNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthX1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthX2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthX4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthX8
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckUpper1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckUpper2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckUpper4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckLeftNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckLeft1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckLeft2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckLeft4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckRightNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckRight1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckRight2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/CheekPuffSuckRight4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawZ1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawZ2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/JawZ4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueXNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueX1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueX2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueX4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueYNegative
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueY1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueY2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/TongueY4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchLeft1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchLeft2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchLeft4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchRight1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchRight2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowPinchRight4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowInnerUp1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowInnerUp2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/BrowInnerUp4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckLower1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckLower2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/LipSuckLower4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthRaiserLower1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthRaiserLower2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/MouthRaiserLower4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/NoseSneer1
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/NoseSneer2
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: v2/NoseSneer4
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
