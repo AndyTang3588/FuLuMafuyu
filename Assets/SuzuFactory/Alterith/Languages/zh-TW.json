@@ -1,0 +1,350 @@
+{
+    "languageCode": "zh-TW",
+    "languageName": "繁體中文",
+    "entries": [
+        {
+            "key": "source",
+            "value": "轉換來源"
+        },
+        {
+            "key": "destination",
+            "value": "轉換目標"
+        },
+        {
+            "key": "settings",
+            "value": "設定"
+        },
+        {
+            "key": "advanced",
+            "value": "詳細設定"
+        },
+        {
+            "key": "avatar",
+            "value": "虛擬形象"
+        },
+        {
+            "key": "body_meshes",
+            "value": "身體網格"
+        },
+        {
+            "key": "clothing",
+            "value": "服裝"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "權重傳遞"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "權重傳遞 目標網格"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "排除網格"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "擬合 迭代次數"
+        },
+        {
+            "key": "fitting_range",
+            "value": "擬合 範圍"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "擬合 鄰近數"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "擬合 最小邊距"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "擬合 邊距比例"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "平滑 比率"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "平滑 樣本數"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "平滑 鄰近數"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "權重傳遞 迭代次數"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "權重傳遞 距離"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "權重傳遞 寬度"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "權重傳遞 樣本數"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "權重傳遞 鄰近數"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "左右分離"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "骨骼位置閾值"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "忽略手部細節"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "忽略腳部細節"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "參考手臂距離"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "參考腿部角度"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "使原始服裝不活躍"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "將原始服裝設為僅編輯器可見"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "將轉換後的服裝設為無標籤"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "刪除舊的轉換服裝"
+        },
+        {
+            "key": "parameters",
+            "value": "參數（唯讀）"
+        },
+        {
+            "key": "convert",
+            "value": "轉換"
+        },
+        {
+            "key": "language",
+            "value": "語言"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "轉換來源和轉換目標服裝必須具有相同數量的 SkinnedMeshRenderer 組件。"
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "轉換目標虛擬形象的排除服裝 {0} 必須是轉換目標虛擬形象服裝的子物件。"
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "轉換來源和轉換目標服裝的 SkinnedMeshRenderer {0} 在其網格中必須具有相同數量的頂點。"
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "轉換來源和轉換目標虛擬形象身體必須至少有一個 SkinnedMeshRenderer 組件。"
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "轉換目標虛擬形象的骨骼權重傳遞服裝 {0} 必須是轉換目標虛擬形象服裝的子物件。"
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "{0} 虛擬形象未設定。"
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "{0} 虛擬形象必須有一個 Animator 組件。"
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "{0} 虛擬形象的 Animator 必須指派一個 Avatar。"
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "{0} 虛擬形象的 Animator 必須指派一個人形 Avatar。"
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "{0} 虛擬形象 Animator 的 Avatar 無效。"
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "{0} 虛擬形象身體未設定。"
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "{0} 虛擬形象身體必須是 {0} 虛擬形象的子物件。"
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "{0} 虛擬形象身體必須至少有一個 SkinnedMeshRenderer 組件。"
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "{0} 虛擬形象身體的 SkinnedMeshRenderer 必須指派一個網格。"
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "{0} 服裝未設定。"
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "{0} 服裝必須是 {0} 虛擬形象的子物件。"
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "{0} 服裝必須至少有一個 SkinnedMeshRenderer 組件。"
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "{0} 服裝的 SkinnedMeshRenderer 必須指派一個網格。"
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "轉換被使用者取消。"
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "由於驗證錯誤，轉換失敗。"
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "保留值為 0 的 BlendShapes"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "將骨骼複製到轉換後的服裝"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "將原始網格添加為 BlendShape"
+        },
+        {
+            "key": "mask_image",
+            "value": "遮罩圖像"
+        },
+        {
+            "key": "mask_area",
+            "value": "遮罩區域"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "權重傳遞：受影響"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "權重傳遞：影響他人"
+        },
+        {
+            "key": "target_materials",
+            "value": "目標材質"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "指定目標材質"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "指定遮罩圖像"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "覆蓋最小邊距"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "覆蓋邊距比例"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "繼承"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "啟用"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "禁用"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "全部"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "無"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "僅指定項"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "排除指定項"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "白色區域"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "黑色區域"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "應用擬合"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "清理轉換後的服裝"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "清理轉換後的服裝"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "這將把未使用的轉換後服裝移動到資源回收筒。\n需要儲存當前場景以檢查相依性。是否可以繼續儲存？"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "確定"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "取消"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "找到 {0} 個轉換後的服裝，其中 {1} 個未被使用。這些將被移動到資源回收筒。\n是否繼續？"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "未使用的轉換後服裝已移動到資源回收筒。"
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "未找到未使用的轉換後服裝。"
+        }
+    ]
+}

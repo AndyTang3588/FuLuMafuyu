@@ -1,0 +1,350 @@
+{
+    "languageCode": "ja-JP",
+    "languageName": "日本語",
+    "entries": [
+        {
+            "key": "source",
+            "value": "変換元"
+        },
+        {
+            "key": "destination",
+            "value": "変換先"
+        },
+        {
+            "key": "settings",
+            "value": "設定"
+        },
+        {
+            "key": "advanced",
+            "value": "詳細設定"
+        },
+        {
+            "key": "avatar",
+            "value": "アバター"
+        },
+        {
+            "key": "body_meshes",
+            "value": "素体メッシュ"
+        },
+        {
+            "key": "clothing",
+            "value": "衣装"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "ウェイト転送"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "ウェイト転送 指定メッシュ"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "除外メッシュ"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "フィッティング 反復回数"
+        },
+        {
+            "key": "fitting_range",
+            "value": "フィッティング 範囲"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "フィッティング 近傍数"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "フィッティング 最小マージン"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "フィッティング マージンスケール"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "スムーズ 比率"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "スムーズ サンプル数"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "スムーズ 近傍数"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "ウェイト転送 反復回数"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "ウェイト転送 距離"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "ウェイト転送 幅"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "ウェイト転送 サンプル数"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "ウェイト転送 近傍数"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "左右分離"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "ボーン位置閾値"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "手のディティールを無視"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "足のディティールを無視"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "参照腕距離"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "参照脚角度"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "元の衣装を非アクティブ化する"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "元の衣装を Editor Only にする"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "変換後の衣装を Untagged にする"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "古い変換済み衣装を削除"
+        },
+        {
+            "key": "parameters",
+            "value": "パラメータ（読み取り専用）"
+        },
+        {
+            "key": "convert",
+            "value": "変換"
+        },
+        {
+            "key": "language",
+            "value": "言語"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "変換元と変換先の衣装は同じ数の SkinnedMeshRenderer コンポーネントを持つ必要があります。"
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "変換先アバターの除外衣装 {0} は変換先アバターの衣装の子である必要があります。"
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "変換元と変換先の衣装の SkinnedMeshRenderer {0} は同じ数の頂点をそのメッシュに持つ必要があります。"
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "変換元と変換先のアバター素体は少なくとも 1 つの SkinnedMeshRenderer コンポーネントを持つ必要があります。"
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "変換先アバターのウェイト転送衣装 {0} は変換先アバターの衣装の子である必要があります。"
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "{0} アバターが設定されていません。"
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "{0} アバターは Animator コンポーネントを持つ必要があります。"
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "{0} アバターの Animator には Avatar が割り当てられている必要があります。"
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "{0} アバターの Animator にはヒューマノイド Avatar が割り当てられている必要があります。"
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "{0} アバターの Animator の Avatar が有効ではありません。"
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "{0} アバターの素体が設定されていません。"
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "{0} アバターの素体は {0} アバターの子である必要があります。"
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "{0} アバターの素体は少なくとも 1 つの SkinnedMeshRenderer コンポーネントを持つ必要があります。"
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "{0} アバターの素体の SkinnedMeshRenderer にはメッシュが割り当てられている必要があります。"
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "{0} 衣装が設定されていません。"
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "{0} 衣装は {0} アバターの子である必要があります。"
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "{0} 衣装は少なくとも 1 つの SkinnedMeshRenderer コンポーネントを持つ必要があります。"
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "{0} 衣装の SkinnedMeshRenderer にはメッシュが割り当てられている必要があります。"
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "変換はユーザーによってキャンセルされました。"
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "検証エラーのため変換に失敗しました。"
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "値が 0 のブレンドシェイプを保持"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "変換後の衣装にボーンをコピー"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "元のメッシュをブレンドシェイプとして追加"
+        },
+        {
+            "key": "mask_image",
+            "value": "マスク画像"
+        },
+        {
+            "key": "mask_area",
+            "value": "マスク領域"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "ウェイト転送 影響を受ける"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "ウェイト転送 影響を及ぼす"
+        },
+        {
+            "key": "target_materials",
+            "value": "対象マテリアル"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "対象マテリアルを指定"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "マスク画像を指定"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "最小マージンを上書き"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "マージンスケールを上書き"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "継承"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "有効"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "無効"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "すべて"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "なし"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "指定したもののみ"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "指定したものを除外"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "白い領域"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "黒い領域"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "フィッティングを適用"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "変換済み衣装のクリーンアップ"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "変換済み衣装のクリーンアップ"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "使用されていない変換済み衣装をゴミ箱に移動します。\n依存関係を調べるため、現在のシーンを保存してよろしいですか？"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "OK"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "キャンセル"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "{0} 個の変換済み衣装のうち、使用されていない {1} 個をゴミ箱に移動します。\nよろしいですか？"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "使用されていない変換済み衣装をゴミ箱に移動しました。"
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "使用されていない変換済み衣装が見つかりませんでした。"
+        }
+    ]
+}

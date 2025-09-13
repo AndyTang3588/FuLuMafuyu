@@ -1,0 +1,350 @@
+{
+    "languageCode": "it-IT",
+    "languageName": "Italiano",
+    "entries": [
+        {
+            "key": "source",
+            "value": "Origine"
+        },
+        {
+            "key": "destination",
+            "value": "Destinazione"
+        },
+        {
+            "key": "settings",
+            "value": "Impostazioni"
+        },
+        {
+            "key": "advanced",
+            "value": "Impostazioni avanzate"
+        },
+        {
+            "key": "avatar",
+            "value": "Avatar"
+        },
+        {
+            "key": "body_meshes",
+            "value": "Mesh del corpo"
+        },
+        {
+            "key": "clothing",
+            "value": "Abbigliamento"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "Trasferimento pesi"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "Trasferimento pesi: Mesh obiettivo"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "Escludi mesh"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "Adattamento: Iterazioni"
+        },
+        {
+            "key": "fitting_range",
+            "value": "Adattamento: Raggio"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "Adattamento: Vicini"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "Adattamento: Margine minimo"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "Adattamento: Scala del margine"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "Levigatura: Rapporto"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "Levigatura: Campioni"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "Levigatura: Vicini"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "Trasferimento pesi: Iterazioni"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "Trasferimento pesi: Distanza"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "Trasferimento pesi: Larghezza"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "Trasferimento pesi: Campioni"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "Trasferimento pesi: Vicini"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "Separa sinistra/destra"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "Soglia posizione ossa"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "Ignora dettagli delle mani"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "Ignora dettagli dei piedi"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "Distanza di riferimento del braccio"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "Angolo di riferimento della gamba"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "Disattiva abbigliamento originale"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "Rendi abbigliamento originale solo per editor"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "Rendi abbigliamento convertito senza tag"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "Elimina vecchio abbigliamento convertito"
+        },
+        {
+            "key": "parameters",
+            "value": "Parametri (sola lettura)"
+        },
+        {
+            "key": "convert",
+            "value": "Converti"
+        },
+        {
+            "key": "language",
+            "value": "Lingua"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "L'abbigliamento di Origine e Destinazione deve avere lo stesso numero di componenti SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "L'abbigliamento escluso {0} dell'Avatar di Destinazione deve essere un figlio dell'abbigliamento dell'Avatar di Destinazione."
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "Lo SkinnedMeshRenderer {0} dell'abbigliamento di Origine e Destinazione deve avere lo stesso numero di vertici nel loro Mesh."
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "I corpi degli Avatar di Origine e Destinazione devono avere almeno un componente SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "L'abbigliamento per il trasferimento dei pesi delle ossa {0} dell'Avatar di Destinazione deve essere un figlio dell'abbigliamento dell'Avatar di Destinazione."
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "L'Avatar {0} non è impostato."
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "L'Avatar {0} deve avere un componente Animator."
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "L'Animator dell'Avatar {0} deve avere un Avatar assegnato."
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "L'Animator dell'Avatar {0} deve avere un Avatar umano assegnato."
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "L'Avatar dell'Animator dell'Avatar {0} non è valido."
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "I corpi dell'Avatar {0} non sono impostati."
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "Il corpo dell'Avatar {0} deve essere un figlio dell'Avatar {0}."
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "I corpi dell'Avatar {0} devono avere almeno un componente SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "Lo SkinnedMeshRenderer del corpo dell'Avatar {0} deve avere un Mesh assegnato."
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "L'abbigliamento {0} non è impostato."
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "L'abbigliamento {0} deve essere un figlio dell'Avatar {0}."
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "L'abbigliamento {0} deve avere almeno un componente SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "Lo SkinnedMeshRenderer dell'abbigliamento {0} deve avere un Mesh assegnato."
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "Conversione annullata dall'utente."
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "Conversione fallita a causa di errori di validazione."
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "Preservare BlendShapes con valore 0"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "Copiare ossa all'abbigliamento convertito"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "Aggiungere mesh originale come BlendShape"
+        },
+        {
+            "key": "mask_image",
+            "value": "Immagine maschera"
+        },
+        {
+            "key": "mask_area",
+            "value": "Area maschera"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "Trasferimento pesi: Influenzato"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "Trasferimento pesi: Influenza altri"
+        },
+        {
+            "key": "target_materials",
+            "value": "Materiali target"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "Specificare materiali target"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "Specificare immagine maschera"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "Sovrascrivere margine minimo"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "Sovrascrivere scala del margine"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "Ereditare"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "Attiva"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "Disattiva"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "Tutto"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "Niente"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "Solo Specificati"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "Escludi Specificati"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "Aree Bianche"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "Aree Nere"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "Applica Adattamento"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "Pulisci abbigliamento convertito"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "Pulisci abbigliamento convertito"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "Questo sposterà l'abbigliamento convertito inutilizzato nel cestino.\nLa scena attuale deve essere salvata per verificare le dipendenze. Va bene procedere con il salvataggio?"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "OK"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "Annulla"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "Trovati {0} elementi di abbigliamento convertito, di cui {1} non utilizzati. Questi verranno spostati nel cestino.\nVuoi continuare?"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "L'abbigliamento convertito inutilizzato è stato spostato nel cestino."
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "Non è stato trovato abbigliamento convertito inutilizzato."
+        }
+    ]
+}

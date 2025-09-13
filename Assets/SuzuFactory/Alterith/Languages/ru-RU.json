@@ -1,0 +1,350 @@
+{
+    "languageCode": "ru-RU",
+    "languageName": "Русский",
+    "entries": [
+        {
+            "key": "source",
+            "value": "Источник"
+        },
+        {
+            "key": "destination",
+            "value": "Назначение"
+        },
+        {
+            "key": "settings",
+            "value": "Настройки"
+        },
+        {
+            "key": "advanced",
+            "value": "Расширенные настройки"
+        },
+        {
+            "key": "avatar",
+            "value": "Аватар"
+        },
+        {
+            "key": "body_meshes",
+            "value": "Меши тела"
+        },
+        {
+            "key": "clothing",
+            "value": "Одежда"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "Перенос весов"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "Перенос весов: Целевые меши"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "Исключить меши"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "Подгонка: Итерации"
+        },
+        {
+            "key": "fitting_range",
+            "value": "Подгонка: Диапазон"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "Подгонка: Соседи"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "Подгонка: Минимальный отступ"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "Подгонка: Масштаб отступа"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "Сглаживание: Соотношение"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "Сглаживание: Образцы"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "Сглаживание: Соседи"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "Перенос весов: Итерации"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "Перенос весов: Расстояние"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "Перенос весов: Ширина"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "Перенос весов: Образцы"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "Перенос весов: Соседи"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "Разделить левое/правое"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "Порог положения кости"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "Игнорировать детали рук"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "Игнорировать детали ног"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "Эталонное расстояние руки"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "Эталонный угол ноги"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "Деактивировать оригинальную одежду"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "Сделать оригинальную одежду только для редактора"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "Сделать конвертированную одежду без тегов"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "Удалить старую конвертированную одежду"
+        },
+        {
+            "key": "parameters",
+            "value": "Параметры (только для чтения)"
+        },
+        {
+            "key": "convert",
+            "value": "Конвертировать"
+        },
+        {
+            "key": "language",
+            "value": "Язык"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "Одежда Источника и Назначения должна иметь одинаковое количество компонентов SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "Исключенная одежда {0} Аватара Назначения должна быть дочерним объектом одежды Аватара Назначения."
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "SkinnedMeshRenderer {0} одежды Источника и Назначения должен иметь одинаковое количество вершин в своем Меше."
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "Тела Аватаров Источника и Назначения должны иметь хотя бы один компонент SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "Одежда {0} для переноса весов костей Аватара Назначения должна быть дочерним объектом одежды Аватара Назначения."
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "Аватар {0} не установлен."
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "Аватар {0} должен иметь компонент Animator."
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "Компонент Animator Аватара {0} должен иметь назначенный Avatar."
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "Компонент Animator Аватара {0} должен иметь назначенный человеческий Avatar."
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "Avatar компонента Animator Аватара {0} недействителен."
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "Тела Аватара {0} не установлены."
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "Тело Аватара {0} должно быть дочерним объектом Аватара {0}."
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "Тела Аватара {0} должны иметь хотя бы один компонент SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "SkinnedMeshRenderer тела Аватара {0} должен иметь назначенный Mesh."
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "Одежда {0} не установлена."
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "Одежда {0} должна быть дочерним объектом Аватара {0}."
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "Одежда {0} должна иметь хотя бы один компонент SkinnedMeshRenderer."
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "SkinnedMeshRenderer одежды {0} должен иметь назначенный Mesh."
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "Конвертация отменена пользователем."
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "Конвертация не удалась из-за ошибок валидации."
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "Сохранять BlendShapes со значением 0"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "Копировать кости в конвертированную одежду"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "Добавить оригинальный меш как BlendShape"
+        },
+        {
+            "key": "mask_image",
+            "value": "Изображение маски"
+        },
+        {
+            "key": "mask_area",
+            "value": "Область маски"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "Передача весов: Подвержен влиянию"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "Передача весов: Влияет на других"
+        },
+        {
+            "key": "target_materials",
+            "value": "Целевые материалы"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "Указать целевые материалы"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "Указать изображение маски"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "Переопределить минимальный отступ"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "Переопределить масштаб отступа"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "Наследовать"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "Включить"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "Отключить"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "Всё"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "Ничего"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "Только Указанные"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "Исключить Указанные"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "Белые Области"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "Черные Области"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "Применить Подгонку"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "Очистка конвертированной одежды"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "Очистка конвертированной одежды"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "Это переместит неиспользуемую конвертированную одежду в корзину.\nТекущую сцену необходимо сохранить для проверки зависимостей. Можно продолжить с сохранением?"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "OK"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "Отмена"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "Найдено {0} элементов конвертированной одежды, из которых {1} не используются. Они будут перемещены в корзину.\nПродолжить?"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "Неиспользуемая конвертированная одежда перемещена в корзину."
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "Неиспользуемая конвертированная одежда не найдена."
+        }
+    ]
+}

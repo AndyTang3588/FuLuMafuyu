@@ -1,0 +1,350 @@
+{
+    "languageCode": "ko-KR",
+    "languageName": "한국어",
+    "entries": [
+        {
+            "key": "source",
+            "value": "변환 원본"
+        },
+        {
+            "key": "destination",
+            "value": "변환 대상"
+        },
+        {
+            "key": "settings",
+            "value": "설정"
+        },
+        {
+            "key": "advanced",
+            "value": "상세 설정"
+        },
+        {
+            "key": "avatar",
+            "value": "아바타"
+        },
+        {
+            "key": "body_meshes",
+            "value": "신체 메시"
+        },
+        {
+            "key": "clothing",
+            "value": "의상"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "웨이트 전송"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "웨이트 전송 대상 메시"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "제외 메시"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "피팅 반복 횟수"
+        },
+        {
+            "key": "fitting_range",
+            "value": "피팅 범위"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "피팅 이웃 수"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "피팅 최소 마진"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "피팅 마진 스케일"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "스무딩 비율"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "스무딩 샘플 수"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "스무딩 이웃 수"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "웨이트 전송 반복 횟수"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "웨이트 전송 거리"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "웨이트 전송 폭"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "웨이트 전송 샘플 수"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "웨이트 전송 이웃 수"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "좌우 분리"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "본 위치 임계값"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "손 디테일 무시"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "발 디테일 무시"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "참조 팔 거리"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "참조 다리 각도"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "원본 의상 비활성화"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "원본 의상을 에디터 전용으로 설정"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "변환된 의상을 태그 없음으로 설정"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "이전 변환 의상 삭제"
+        },
+        {
+            "key": "parameters",
+            "value": "매개변수 (읽기 전용)"
+        },
+        {
+            "key": "convert",
+            "value": "변환"
+        },
+        {
+            "key": "language",
+            "value": "언어"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "변환 원본과 변환 대상 의상은 동일한 수의 SkinnedMeshRenderer 컴포넌트를 가져야 합니다."
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "변환 대상 아바타의 제외 의상 {0}은(는) 변환 대상 아바타 의상의 자식이어야 합니다."
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "변환 원본과 변환 대상 의상의 SkinnedMeshRenderer {0}은(는) 메시에 동일한 수의 정점을 가져야 합니다."
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "변환 원본과 변환 대상 아바타 신체는 최소한 하나의 SkinnedMeshRenderer 컴포넌트를 가져야 합니다."
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "변환 대상 아바타의 본 웨이트 전송 의상 {0}은(는) 변환 대상 아바타 의상의 자식이어야 합니다."
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "{0} 아바타가 설정되지 않았습니다."
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "{0} 아바타는 Animator 컴포넌트를 가져야 합니다."
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "{0} 아바타의 Animator에는 Avatar가 할당되어 있어야 합니다."
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "{0} 아바타의 Animator에는 휴머노이드 Avatar가 할당되어 있어야 합니다."
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "{0} 아바타 Animator의 Avatar가 유효하지 않습니다."
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "{0} 아바타 신체가 설정되지 않았습니다."
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "{0} 아바타 신체는 {0} 아바타의 자식이어야 합니다."
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "{0} 아바타 신체는 최소한 하나의 SkinnedMeshRenderer 컴포넌트를 가져야 합니다."
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "{0} 아바타 신체의 SkinnedMeshRenderer에는 Mesh가 할당되어 있어야 합니다."
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "{0} 의상이 설정되지 않았습니다."
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "{0} 의상은 {0} 아바타의 자식이어야 합니다."
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "{0} 의상은 최소한 하나의 SkinnedMeshRenderer 컴포넌트를 가져야 합니다."
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "{0} 의상의 SkinnedMeshRenderer에는 Mesh가 할당되어 있어야 합니다."
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "사용자에 의해 변환이 취소되었습니다."
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "유효성 검사 오류로 인해 변환에 실패했습니다."
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "값이 0 인 블렌드쉐이프 유지"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "변환된 의상에 본 복사"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "원본 메시를 블렌드쉐이프로 추가"
+        },
+        {
+            "key": "mask_image",
+            "value": "마스크 이미지"
+        },
+        {
+            "key": "mask_area",
+            "value": "마스크 영역"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "가중치 전송: 영향 받음"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "가중치 전송: 영향 줌"
+        },
+        {
+            "key": "target_materials",
+            "value": "대상 재질"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "대상 재질 지정"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "마스크 이미지 지정"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "최소 마진 재정의"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "마진 스케일 재정의"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "상속"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "활성화"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "비활성화"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "모두"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "없음"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "지정된 것만"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "지정된 것 제외"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "흰색 영역"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "검은색 영역"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "피팅 적용"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "변환된 의상 정리"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "변환된 의상 정리"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "사용되지 않는 변환된 의상을 휴지통으로 이동합니다.\n의존성을 확인하기 위해 현재 씬을 저장해야 합니다. 저장을 진행해도 괜찮습니까?"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "확인"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "취소"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "변환된 의상 {0}개 중 {1}개가 사용되지 않고 있습니다. 이들을 휴지통으로 이동합니다.\n계속하시겠습니까?"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "사용되지 않는 변환된 의상이 휴지통으로 이동되었습니다."
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "사용되지 않는 변환된 의상이 발견되지 않았습니다."
+        }
+    ]
+}

@@ -8,12 +8,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Costume
-  m_Shader: {fileID: 4800000, guid: df12117ecd77c31469c224178886498e, type: 3}
+  m_Shader: {fileID: 4800000, guid: efa77a80ca0344749b4f19fdd5891cbe, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords:
-  - _NORMALMAP
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -173,10 +172,6 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4833f9a25b2e0954195f1f3bdbe05137, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MaskTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MatCap2ndBlendMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -271,9 +266,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - ShadowNormalBias: 0
-    - SimplePCSS_Softness: 0.015
-    - SimplePCSS_SoftnessFalloff: 1
     - _AAStrength: 1
     - _AlphaBoostFA: 10
     - _AlphaMaskMode: 0
@@ -388,7 +380,6 @@ Material:
     - _EmissionMap_UVMode: 0
     - _EmissionParallaxDepth: 0
     - _EmissionUseGrad: 0
-    - _EnvLightStrength: 0.3
     - _FlipNormal: 0
     - _GSAAStrength: 0
     - _GlitterAngleRandomize: 0
@@ -652,7 +643,6 @@ Material:
     - _UseGlitter: 0
     - _UseMain2ndTex: 0
     - _UseMain3rdTex: 0
-    - _UseMaskTex: 0
     - _UseMatCap: 0
     - _UseMatCap2nd: 0
     - _UseOutline: 0
@@ -672,7 +662,7 @@ Material:
     - _egci: 2
     - _lilDirectionalLightStrength: 1
     - _lilShadowCasterBias: 0
-    - _lilToonVersion: 43
+    - _lilToonVersion: 44
     m_Colors:
     - _AudioLinkDefaultValue: {r: 0, g: 0, b: 2, a: 0.75}
     - _AudioLinkLocalMapParams: {r: 120, g: 1, b: 0, a: 0}
@@ -739,7 +729,7 @@ Material:
     - _ReflectionCubeColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 0.605242, g: 0.5962975, b: 0.6320754, a: 0.345}
     - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
-    - _RimShadeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _RimShadeColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
     - _Shadow2ndColor: {r: 0.7467515, g: 0.8422974, b: 0.9150943, a: 1}
     - _Shadow3rdColor: {r: 0.50980395, g: 0.54901963, b: 0.7176471, a: 0}
     - _ShadowAOShift: {r: 0.98039216, g: 0.009803921, b: 0.990099, a: 0.00990099}

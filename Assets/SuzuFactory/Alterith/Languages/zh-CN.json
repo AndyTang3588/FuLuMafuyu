@@ -1,0 +1,350 @@
+{
+    "languageCode": "zh-CN",
+    "languageName": "简体中文",
+    "entries": [
+        {
+            "key": "source",
+            "value": "转换源"
+        },
+        {
+            "key": "destination",
+            "value": "转换目标"
+        },
+        {
+            "key": "settings",
+            "value": "设置"
+        },
+        {
+            "key": "advanced",
+            "value": "详细设置"
+        },
+        {
+            "key": "avatar",
+            "value": "虚拟形象"
+        },
+        {
+            "key": "body_meshes",
+            "value": "身体网格"
+        },
+        {
+            "key": "clothing",
+            "value": "服装"
+        },
+        {
+            "key": "transfer_weights",
+            "value": "权重传递"
+        },
+        {
+            "key": "transfer_weights_target_meshes",
+            "value": "权重传递 目标网格"
+        },
+        {
+            "key": "exclude_meshes",
+            "value": "排除网格"
+        },
+        {
+            "key": "fitting_iterations",
+            "value": "拟合 迭代次数"
+        },
+        {
+            "key": "fitting_range",
+            "value": "拟合 范围"
+        },
+        {
+            "key": "fitting_neighbors",
+            "value": "拟合 邻近数"
+        },
+        {
+            "key": "fitting_minimum_margin",
+            "value": "拟合 最小边距"
+        },
+        {
+            "key": "fitting_margin_scale",
+            "value": "拟合 边距比例"
+        },
+        {
+            "key": "smooth_ratio",
+            "value": "平滑 比率"
+        },
+        {
+            "key": "smooth_samples",
+            "value": "平滑 样本数"
+        },
+        {
+            "key": "smooth_neighbors",
+            "value": "平滑 邻近数"
+        },
+        {
+            "key": "weight_transfer_iterations",
+            "value": "权重传递 迭代次数"
+        },
+        {
+            "key": "weight_transfer_distance",
+            "value": "权重传递 距离"
+        },
+        {
+            "key": "weight_transfer_width",
+            "value": "权重传递 宽度"
+        },
+        {
+            "key": "weight_transfer_samples",
+            "value": "权重传递 样本数"
+        },
+        {
+            "key": "weight_transfer_neighbors",
+            "value": "权重传递 邻近数"
+        },
+        {
+            "key": "separate_left_right",
+            "value": "左右分离"
+        },
+        {
+            "key": "bone_position_threshold",
+            "value": "骨骼位置阈值"
+        },
+        {
+            "key": "ignore_hand_detail",
+            "value": "忽略手部细节"
+        },
+        {
+            "key": "ignore_foot_detail",
+            "value": "忽略脚部细节"
+        },
+        {
+            "key": "reference_arm_distance",
+            "value": "参考手臂距离"
+        },
+        {
+            "key": "reference_leg_angle",
+            "value": "参考腿部角度"
+        },
+        {
+            "key": "inactive_original_clothing",
+            "value": "使原始服装不活跃"
+        },
+        {
+            "key": "make_original_clothing_editor_only",
+            "value": "将原始服装设为仅编辑器可见"
+        },
+        {
+            "key": "make_converted_clothing_untagged",
+            "value": "将转换后的服装设为无标签"
+        },
+        {
+            "key": "delete_old_converted_clothing",
+            "value": "删除旧的转换服装"
+        },
+        {
+            "key": "parameters",
+            "value": "参数（只读）"
+        },
+        {
+            "key": "convert",
+            "value": "转换"
+        },
+        {
+            "key": "language",
+            "value": "语言"
+        },
+        {
+            "key": "error_clothing_smr_count_mismatch",
+            "value": "转换源和转换目标服装必须具有相同数量的 SkinnedMeshRenderer 组件。"
+        },
+        {
+            "key": "error_excluded_clothing_not_child",
+            "value": "转换目标虚拟形象的排除服装 {0} 必须是转换目标虚拟形象服装的子对象。"
+        },
+        {
+            "key": "error_clothing_smr_vertex_count_mismatch",
+            "value": "转换源和转换目标服装的 SkinnedMeshRenderer {0} 在其网格中必须具有相同数量的顶点。"
+        },
+        {
+            "key": "error_no_body_smr",
+            "value": "转换源和转换目标虚拟形象身体必须至少有一个 SkinnedMeshRenderer 组件。"
+        },
+        {
+            "key": "error_transfer_clothing_not_child",
+            "value": "转换目标虚拟形象的骨骼权重传递服装 {0} 必须是转换目标虚拟形象服装的子对象。"
+        },
+        {
+            "key": "error_avatar_not_set",
+            "value": "{0} 虚拟形象未设置。"
+        },
+        {
+            "key": "error_avatar_no_animator",
+            "value": "{0} 虚拟形象必须有一个 Animator 组件。"
+        },
+        {
+            "key": "error_avatar_no_avatar",
+            "value": "{0} 虚拟形象的 Animator 必须分配一个 Avatar。"
+        },
+        {
+            "key": "error_avatar_not_human",
+            "value": "{0} 虚拟形象的 Animator 必须分配一个人形 Avatar。"
+        },
+        {
+            "key": "error_avatar_not_valid",
+            "value": "{0} 虚拟形象 Animator 的 Avatar 无效。"
+        },
+        {
+            "key": "error_avatar_bodies_not_set",
+            "value": "{0} 虚拟形象身体未设置。"
+        },
+        {
+            "key": "error_body_not_child",
+            "value": "{0} 虚拟形象身体必须是 {0} 虚拟形象的子对象。"
+        },
+        {
+            "key": "error_bodies_no_smr",
+            "value": "{0} 虚拟形象身体必须至少有一个 SkinnedMeshRenderer 组件。"
+        },
+        {
+            "key": "error_body_smr_no_mesh",
+            "value": "{0} 虚拟形象身体的 SkinnedMeshRenderer 必须分配一个网格。"
+        },
+        {
+            "key": "error_clothing_not_set",
+            "value": "{0} 服装未设置。"
+        },
+        {
+            "key": "error_clothing_not_child",
+            "value": "{0} 服装必须是 {0} 虚拟形象的子对象。"
+        },
+        {
+            "key": "error_clothing_no_smr",
+            "value": "{0} 服装必须至少有一个 SkinnedMeshRenderer 组件。"
+        },
+        {
+            "key": "error_clothing_smr_no_mesh",
+            "value": "{0} 服装的 SkinnedMeshRenderer 必须分配一个网格。"
+        },
+        {
+            "key": "error_conversion_cancelled",
+            "value": "转换被用户取消。"
+        },
+        {
+            "key": "error_conversion_failed",
+            "value": "由于验证错误，转换失败。"
+        },
+        {
+            "key": "preserve_zero_blendshapes",
+            "value": "保留值为 0 的 BlendShapes"
+        },
+        {
+            "key": "copy_bones_to_converted_clothing",
+            "value": "将骨骼复制到转换后的服装"
+        },
+        {
+            "key": "add_original_mesh_as_blendshape",
+            "value": "将原始网格添加为 BlendShape"
+        },
+        {
+            "key": "mask_image",
+            "value": "蒙版图像"
+        },
+        {
+            "key": "mask_area",
+            "value": "蒙版区域"
+        },
+        {
+            "key": "weight_transfer_affected",
+            "value": "权重传递：受影响"
+        },
+        {
+            "key": "weight_transfer_affects",
+            "value": "权重传递：影响他人"
+        },
+        {
+            "key": "target_materials",
+            "value": "目标材质"
+        },
+        {
+            "key": "specify_target_materials",
+            "value": "指定目标材质"
+        },
+        {
+            "key": "specify_mask_image",
+            "value": "指定蒙版图像"
+        },
+        {
+            "key": "override_minimum_margin",
+            "value": "覆盖最小边距"
+        },
+        {
+            "key": "override_margin_scale",
+            "value": "覆盖边距比例"
+        },
+        {
+            "key": "optional_bool_inherit",
+            "value": "继承"
+        },
+        {
+            "key": "optional_bool_enable",
+            "value": "启用"
+        },
+        {
+            "key": "optional_bool_disable",
+            "value": "禁用"
+        },
+        {
+            "key": "transfer_weights_mode_everything",
+            "value": "全部"
+        },
+        {
+            "key": "transfer_weights_mode_nothing",
+            "value": "无"
+        },
+        {
+            "key": "transfer_weights_mode_only_specified",
+            "value": "仅指定项"
+        },
+        {
+            "key": "transfer_weights_mode_exclude_specified",
+            "value": "排除指定项"
+        },
+        {
+            "key": "mask_area_white",
+            "value": "白色区域"
+        },
+        {
+            "key": "mask_area_black",
+            "value": "黑色区域"
+        },
+        {
+            "key": "apply_fitting",
+            "value": "应用拟合"
+        },
+        {
+            "key": "cleanup_unused_meshes",
+            "value": "清理转换后的服装"
+        },
+        {
+            "key": "cleanup_title",
+            "value": "清理转换后的服装"
+        },
+        {
+            "key": "cleanup_confirm_save_message",
+            "value": "这将把未使用的转换后服装移动到回收站。\n需要保存当前场景以检查依赖关系。是否可以继续保存？"
+        },
+        {
+            "key": "confirm_ok",
+            "value": "确定"
+        },
+        {
+            "key": "confirm_cancel",
+            "value": "取消"
+        },
+        {
+            "key": "cleanup_confirm",
+            "value": "找到 {0} 个转换后的服装，其中 {1} 个未被使用。这些将被移动到回收站。\n是否继续？"
+        },
+        {
+            "key": "cleanup_success",
+            "value": "未使用的转换后服装已移动到回收站。"
+        },
+        {
+            "key": "cleanup_no_unused_meshes",
+            "value": "未找到未使用的转换后服装。"
+        }
+    ]
+}
