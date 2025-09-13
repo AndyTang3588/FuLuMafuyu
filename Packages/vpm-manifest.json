@@ -23,6 +23,9 @@
     },
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7"
+    },
+    "com.aoyon.module-creator": {
+      "version": "0.6.1"
     }
   },
   "locked": {
@@ -43,7 +46,7 @@
     "vrchat.blackstartx.gesture-manager": {
       "version": "3.9.4",
       "dependencies": {
-        "com.vrchat.avatars": ">=3.5.2 < 3.9.X"
+        "com.vrchat.avatars": ">=3.5.2 <3.9.X"
       }
     },
     "dev.vrlabs.av3manager": {
@@ -70,6 +73,12 @@
     "de.thryrallo.vrc.avatar-performance-tools": {
       "version": "1.3.7",
       "dependencies": {}
+    },
+    "com.aoyon.module-creator": {
+      "version": "0.6.1",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.0.0"
+      }
     }
   }
 }
