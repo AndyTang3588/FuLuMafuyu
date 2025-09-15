@@ -10286,7 +10286,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FxLayer_Mafuyu_FT
+  m_Name: FxLayer_NewMafuyu_FT
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: GestureLeft

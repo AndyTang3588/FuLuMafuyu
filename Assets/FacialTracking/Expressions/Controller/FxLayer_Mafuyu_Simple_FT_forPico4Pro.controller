@@ -11316,7 +11316,7 @@ BlendTree:
   m_Name: LipPucker/TongueOut/MouthRasier Blend
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 4287940247049949533}
+    m_Motion: {fileID: -2119627212752291764}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -15126,14 +15126,6 @@ BlendTree:
   m_Name: Nose Sneer
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -2119627212752291764}
-    m_Threshold: 0.1
-    m_Position: {x: 0, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: GestureLeftWeight
-    m_Mirror: 0
-  - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 8306c1a378a730f4282ade63b2a19308, type: 2}
     m_Threshold: 0.35
     m_Position: {x: 0, y: 0}
@@ -17852,7 +17844,7 @@ BlendTree:
   m_Childs:
   - serializedVersion: 2
     m_Motion: {fileID: 8398947426840907788}
-    m_Threshold: 0.35
+    m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -17860,7 +17852,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7433662002674981155}
-    m_Threshold: 0.75
+    m_Threshold: 0.25
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -17868,8 +17860,8 @@ BlendTree:
     m_Mirror: 0
   m_BlendParameter: OSCm/Proxy/v2/TongueOut
   m_BlendParameterY: GestureLeftWeight
-  m_MinThreshold: 0.35
-  m_MaxThreshold: 0.75
+  m_MinThreshold: 0
+  m_MaxThreshold: 0.25
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 0
