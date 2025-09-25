@@ -774,6 +774,7 @@ Shader "Hidden/ltspass_cutout"
             #define LIL_FEATURE_FurVectorTex
             #define LIL_OPTIMIZE_APPLY_SHADOW_FA
             #define LIL_OPTIMIZE_USE_FORWARDADD
+            #define LIL_OPTIMIZE_USE_FORWARDADD_SHADOW
             #define LIL_OPTIMIZE_USE_VERTEXLIGHT
             #pragma skip_variants LIGHTMAP_ON DYNAMICLIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK DIRLIGHTMAP_COMBINED _MIXED_LIGHTING_SUBTRACTIVE
             #pragma target 3.5
@@ -919,7 +920,7 @@ Shader "Hidden/ltspass_cutout"
             // Build Option
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile_fragment POINT DIRECTIONAL SPOT POINT_COOKIE DIRECTIONAL_COOKIE
+            #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile_vertex _ FOG_LINEAR FOG_EXP FOG_EXP2
             #pragma multi_compile_instancing
             #define LIL_PASS_FORWARDADD
@@ -967,7 +968,7 @@ Shader "Hidden/ltspass_cutout"
             // Build Option
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile_fragment POINT DIRECTIONAL SPOT POINT_COOKIE DIRECTIONAL_COOKIE
+            #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile_vertex _ FOG_LINEAR FOG_EXP FOG_EXP2
             #pragma multi_compile_instancing
             #define LIL_PASS_FORWARDADD

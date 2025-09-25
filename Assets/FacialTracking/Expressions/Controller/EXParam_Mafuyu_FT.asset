@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: -1506855854, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: EXParam_Mafuyu_FT
   m_EditorClassIdentifier: 
+  isEmpty: 0
   parameters:
   - name: GestureLock
     valueType: 2
@@ -141,17 +142,17 @@ MonoBehaviour:
   - name: EyeTrackingActive
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: LipTrackingActive
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: GestureExpressionsDisabled
     valueType: 2
     saved: 1
-    defaultValue: 1
+    defaultValue: 0
     networkSynced: 1
   - name: v2/EyeLidLeft
     valueType: 1
