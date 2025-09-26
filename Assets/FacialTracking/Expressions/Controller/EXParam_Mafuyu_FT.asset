@@ -569,3 +569,13 @@ MonoBehaviour:
     saved: 0
     defaultValue: 0
     networkSynced: 1
+  - name: "\u8863\u670D"
+    valueType: 0
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: "\u98CE\u683C\u5207\u6362"
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
