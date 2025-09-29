@@ -75,18 +75,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _DissolveMask:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -212,10 +200,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -376,7 +360,6 @@ Material:
     - _DSV_Invert: 0
     - _DSV_SparkWidth: 0
     - _DSV_TexIsSRGB: 1
-    - _DetailNormalMapScale: 1
     - _DissolveNoiseStrength: 0.1
     - _DistanceFadeMode: 0
     - _DistanceFadeRimFresnelPower: 5
@@ -466,9 +449,6 @@ Material:
     - _GlitterShadowMask: 0
     - _GlitterUVMode: 0
     - _GlitterVRParallaxStrength: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
     - _IDMask1: 0
     - _IDMask2: 0
     - _IDMask3: 0
@@ -558,12 +538,10 @@ Material:
     - _MatCapShadowMask: 0
     - _MatCapVRParallaxStrength: 1
     - _MatCapZRotCancel: 1
-    - _Metallic: 0.261
-    - _Mode: 0
+    - _Metallic: 0.6
     - _MonochromeLighting: 0
     - _NM_Enable: 0
     - _NM_InvConvex: 0
-    - _OcclusionStrength: 1
     - _OffsetFactor: 0
     - _OffsetUnits: 0
     - _OutlineAlphaToMask: 0
@@ -609,7 +587,7 @@ Material:
     - _Parallax: 0.02
     - _ParallaxOffset: 0.5
     - _QuestSupported: 0
-    - _Reflectance: 0.04
+    - _Reflectance: 0.532
     - _ReflectionApplyTransparency: 1
     - _ReflectionBlendMode: 1
     - _ReflectionCubeEnableLighting: 1
@@ -660,11 +638,9 @@ Material:
     - _ShadowStrength: 1
     - _ShadowStrengthMaskLOD: 0
     - _ShiftBackfaceUV: 0
-    - _Smoothness: 1
-    - _SmoothnessTextureChannel: 0
+    - _Smoothness: 0.543
     - _SpecularBlur: 0
     - _SpecularBorder: 0.5
-    - _SpecularHighlights: 1
     - _SpecularNormalStrength: 1
     - _SpecularToon: 0
     - _SrcBlend: 1
@@ -703,7 +679,6 @@ Material:
     - _UDIMDiscardRow3_2: 0
     - _UDIMDiscardRow3_3: 0
     - _UDIMDiscardUV: 0
-    - _UVSec: 0
     - _UseAnisotropy: 0
     - _UseAudioLink: 0
     - _UseBacklight: 0
@@ -723,8 +698,8 @@ Material:
     - _UseParallax: 0
     - _UseReflection: 1
     - _UseRim: 0
-    - _UseRimShade: 0
-    - _UseShadow: 0
+    - _UseRimShade: 1
+    - _UseShadow: 1
     - _UseVertexColor: 0
     - _VRCFallback: 0
     - _VertexLightStrength: 0

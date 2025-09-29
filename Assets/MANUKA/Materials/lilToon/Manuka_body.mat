@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Manuka_body
-  m_Shader: {fileID: 4800000, guid: df12117ecd77c31469c224178886498e, type: 3}
+  m_Shader: {fileID: 4800000, guid: efa77a80ca0344749b4f19fdd5891cbe, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap:
     VRCFallback: Unlit
   disabledShaderPasses: []
@@ -65,11 +65,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: 0a46367ac3550d34dbe6436db7743c5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b9f226efedb6754caa6967aadce8392, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 0a46367ac3550d34dbe6436db7743c5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b9f226efedb6754caa6967aadce8392, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Bump2ndMap:
@@ -189,7 +189,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0a46367ac3550d34dbe6436db7743c5a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1b9f226efedb6754caa6967aadce8392, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCap2ndBlendMask:
@@ -687,19 +687,19 @@ Material:
     - _Scroll_EmissiveV: 0
     - _Set_SystemShadowsToBase: 1
     - _ShadeColor_Step: 0
-    - _Shadow2ndBlur: 0.292
-    - _Shadow2ndBorder: 0.203
+    - _Shadow2ndBlur: 0.073
+    - _Shadow2ndBorder: 0.214
     - _Shadow2ndNormalStrength: 0
     - _Shadow2ndReceive: 0
     - _Shadow3rdBlur: 0.1
     - _Shadow3rdBorder: 0.25
     - _Shadow3rdNormalStrength: 1
     - _Shadow3rdReceive: 0
-    - _ShadowBlur: 0.063
+    - _ShadowBlur: 0.189
     - _ShadowBlurMaskLOD: 0
     - _ShadowBorder: 0.117
     - _ShadowBorderMaskLOD: 0
-    - _ShadowBorderRange: 0.302
+    - _ShadowBorderRange: 0
     - _ShadowColorType: 0
     - _ShadowEnvStrength: 0
     - _ShadowFlatBlur: 1
@@ -709,7 +709,7 @@ Material:
     - _ShadowNormalStrength: 0
     - _ShadowPostAO: 1
     - _ShadowReceive: 1
-    - _ShadowStrength: 0.103
+    - _ShadowStrength: 1
     - _ShadowStrengthMaskLOD: 0
     - _ShiftBackfaceUV: 0
     - _Smoothness: 0.46192604
@@ -786,7 +786,7 @@ Material:
     - _UseReflection: 1
     - _UseRim: 1
     - _UseRimShade: 0
-    - _UseShadow: 1
+    - _UseShadow: 0
     - _Use_1stAs2nd: 1
     - _Use_BaseAs1st: 1
     - _VertexLightStrength: 0
@@ -878,12 +878,12 @@ Material:
     - _RimIndirColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimLightColor: {r: 0.7830189, g: 0.645375, b: 0.62419903, a: 1}
     - _RimShadeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Shadow2ndColor: {r: 0.96078426, g: 0.81960785, b: 0.90588236, a: 0.5}
+    - _Shadow2ndColor: {r: 0.990566, g: 0.90819454, b: 0.8877714, a: 1}
     - _Shadow3rdColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowAOShift: {r: 1, g: 0, b: 1, a: 0}
     - _ShadowAOShift2: {r: 1, g: 0, b: 1, a: 0}
-    - _ShadowBorderColor: {r: 1, g: 0.09803922, b: 0, a: 1}
-    - _ShadowColor: {r: 0.93333334, g: 0.74509805, b: 0.7529412, a: 1}
+    - _ShadowBorderColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 1, g: 0.9617948, b: 0.9433962, a: 1}
     - _ViewShift: {r: 0, g: 0, b: 0, a: 1}
     - _e2ga0: {r: 1, g: 0, b: 0, a: 0}
     - _e2ga1: {r: 1, g: 0, b: 0, a: 1}
