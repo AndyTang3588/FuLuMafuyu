@@ -137,7 +137,7 @@ MonoBehaviour:
   - name: BreastSize
     valueType: 1
     saved: 1
-    defaultValue: 0.5
+    defaultValue: 0
     networkSynced: 1
   - name: EyeTrackingActive
     valueType: 2

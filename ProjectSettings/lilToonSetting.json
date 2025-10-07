@@ -105,10 +105,12 @@
     "LIL_OPTIMIZE_USE_FORWARDADD_SHADOW": true,
     "LIL_OPTIMIZE_USE_VERTEXLIGHT": true,
     "LIL_OPTIMIZE_USE_LIGHTMAP": false,
+    "LIL_OPTIMIZE_USE_VRCLIGHTVOLUMES": true,
     "LIL_OPTIMIZE_DEFFERED": false,
     "isLocked": false,
     "isDebugOptimize": false,
     "isOptimizeInTestBuild": false,
+    "isOptimizeInNDMF": false,
     "isMigrateInStartUp": true,
     "defaultAsUnlit": 0.0,
     "defaultVertexLightStrength": 0.0,
@@ -135,5 +137,5 @@
     "presetCloth": {
         "instanceID": 0
     },
-    "previousVersion": 43
+    "previousVersion": 45
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
   m_Name: EXMenu_Mafuyu_FT placeholder
   m_EditorClassIdentifier: 
-  Parameters: {fileID: 0}
+  Parameters: {fileID: 11400000, guid: b2332c80db8e1154a8d7f23dce7358a3, type: 2}
   controls: []
