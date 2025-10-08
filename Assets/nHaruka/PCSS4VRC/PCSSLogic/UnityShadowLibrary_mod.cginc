@@ -308,10 +308,10 @@ inline float2 Rotate(float2 pos, float2 rotationTrig)
 }
 
 
-SamplerState my_trilinear_clamp_smp;
+SamplerState my_linear_clamp_smp;
 inline float SampleShadowmapDepth(float2 uv)
 {
-    return _ShadowMapTexture.SampleLevel(my_trilinear_clamp_smp, uv, 0.0);
+    return _ShadowMapTexture.SampleLevel(my_linear_clamp_smp, uv, 0.0);
 }
 inline float SampleShadowmap_Soft(float4 coord)
 {

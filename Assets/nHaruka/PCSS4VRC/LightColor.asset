@@ -47,6 +47,16 @@ MonoBehaviour:
     subParameters:
     - name: PCSS_LightColorAdjustStrength
     labels: []
+  - name: AutoLightColorAdjustMonochrome
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: PCSS_LightColorAdjustMono
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
   - name: Gaming
     icon: {fileID: 0}
     type: 102

@@ -13,12 +13,18 @@ namespace nHaruka.PCSS4VRC
 
         List<Material> materials;
 
+        bool useNGSS = false;
+
+        float NGSS_GLOBAL_OPACITY = 0;
+        float NGSS_PCSS_FILTER_LOCAL_MIN = 0.001f;
+        float NGSS_PCSS_FILTER_LOCAL_MAX = 1.0f;
         Color _DropShadowColor = Color.black;
         float _ShadowClamp = 0;
         float _ShadowNormalBias = 0.0025f;
         float _EnvLightStrength = 0.2f;
         float _ShadowDistance = 10;
         float _ShadowDensity = 0.1f;
+
 
         float Softness = 0.0015f;
         float SoftnessFalloff = 1.0f;

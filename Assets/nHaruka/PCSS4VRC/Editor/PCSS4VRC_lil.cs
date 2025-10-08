@@ -1,14 +1,18 @@
-﻿using lilToon;
-using System;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using UnityEditor;
 using UnityEditor.Animations;
-using UnityEngine;
 using UnityEngine.Animations;
+using VRC.Dynamics;
 using VRC.SDK3.Avatars.Components;
+using VRC.SDK3.Dynamics.Contact.Components;
+using VRC.SDK3.Dynamics.PhysBone.Components;
+using lilToon;
+using System.Reflection;
 using VRC.SDK3.Avatars.ScriptableObjects;
 using VRC.SDK3.Dynamics.Constraint.Components;
 
@@ -20,21 +24,19 @@ namespace nHaruka.PCSS4VRC
         private int isEng = 0;
         private bool toggle = false;
         private bool WriteDefault = true;
+        //private bool UseNGSS = false;
         private bool rmMats = false;
+        //private string NGSSRootPath = "Assets/nHaruka/PCSS4VRC/NGSS4lilToon/Shaders";
+        private string PCSSRootPath = "Assets/nHaruka/PCSS4VRC/PCSS4lilToon/Shaders";
+        private string[] shaderPaths = null;
         private string[] escapeChar = { "\\", " ", "#", "/", "!", "%", "'", "|", "?", "&", "\"", "~", "@", ";", ":", "<", ">", "=", ".", "," };
         private bool copyFX = false;
         private bool useMA = true;
-        private bool useOnOff = true;
-        private List<Renderer> excludeList = new List<Renderer>();
-        private bool foldout = false;
-        private bool useOpLight = false;
-        Vector2 scroll1 = Vector2.zero;
-        Vector2 scroll2 = Vector2.zero;
 
         [MenuItem("nHaruka/PCSS For VRC (For lilToon)")]
         private static void Init()
         {
-            var window = GetWindowWithRect<PCSS4VRC_lil>(new Rect(0, 0, 600, 600));
+            var window = GetWindowWithRect<PCSS4VRC_lil>(new Rect(0, 0, 700, 720));
             window.Show();
         }
 
@@ -45,8 +47,6 @@ namespace nHaruka.PCSS4VRC
             style0.fontSize = 16;
             style0.wordWrap = true;
             style0.fontStyle = FontStyle.Bold;
-
-            scroll1 = EditorGUILayout.BeginScrollView(scroll1);
 
             if (isEng == 0)
             {
@@ -59,6 +59,17 @@ namespace nHaruka.PCSS4VRC
             GUILayout.Space(10);
             avatar =
                 (VRCAvatarDescriptor)EditorGUILayout.ObjectField("Avatar", avatar, typeof(VRCAvatarDescriptor), true);
+
+            /*
+            if (isEng == 0)
+            {
+                UseNGSS = GUILayout.Toggle(UseNGSS, "NGSS(Next-Gen Soft-Shadows)を持っている");
+            }
+            else
+            {
+                UseNGSS = GUILayout.Toggle(UseNGSS, "I have NGSS (Next-Gen Soft-Shadows)");
+            }
+            */
 
             GUILayout.Space(5);
 
@@ -126,6 +137,17 @@ namespace nHaruka.PCSS4VRC
             }
             GUILayout.Space(5);
 
+            WriteDefault = GUILayout.Toggle(WriteDefault, "WriteDefaults");
+            if (isEng == 0)
+            {
+                EditorGUILayout.LabelField("※導入アバターのFXレイヤーがどちらで統一されているかによって選択してください。\n統一されていないと表情がおかしくなったり正しく機能しなかったりします。", style);
+            }
+            else
+            {
+                EditorGUILayout.LabelField("*Please make your selection depending on whether or not the FX layer of the avatar you are introducing is unified with either. \nIf they are not unified, the facial expressions may look strange or not function properly.", style);
+            }
+            GUILayout.Space(5);
+
             if (isEng == 0)
             {
                 EditorGUILayout.LabelField("大概のトラブルへの対処法は商品ページに書いてあります。困ったらまずは商品ページを再度ご確認ください。", style3);
@@ -156,37 +178,24 @@ namespace nHaruka.PCSS4VRC
                 style4.normal.textColor = Color.red;
                 if (isEng == 0)
                 {
-                    useMA = GUILayout.Toggle(true, "Modular Avatarを使用してセットアップする（※必須になりました）");
+                    useMA = GUILayout.Toggle(useMA, "Modular Avatarを使用してセットアップする");
                     GUILayout.Label("※Animator関連のみ。マテリアルは差し替えられます。", style4);
                 }
                 else
                 {
-                    useMA = GUILayout.Toggle(true, "Setup with Modular Avatar (*Now required)");
+                    useMA = GUILayout.Toggle(useMA, "Setup with Modular Avatar ");
                     GUILayout.Label("*Animator related only. Materials will be replaced.", style4);
                 }
-                
                 if (isEng == 0)
                 {
-                    useOnOff = GUILayout.Toggle(useOnOff, "ExメニューにOn/Offスイッチをインストールする");
-                    GUILayout.Label("※ヒエラルキーに変更があった場合機能しなくなることがあります", style4);
+                    copyFX = GUILayout.Toggle(copyFX, "FXレイヤー/Expression Menu/ExpressionParametersをコピーしてセットアップする");
+                    GUILayout.Label("※コピーしたものがすでにある場合、上書きするので注意！", style4);
                 }
                 else
                 {
-                    useOnOff = GUILayout.Toggle(useOnOff, "Install an On/Off switch in the Ex menu.");
-                    GUILayout.Label("*May not work if there are changes to the hierarchy.", style4);
+                    copyFX = GUILayout.Toggle(copyFX, "Set up a copy of the FX layer/Expression Menu/ExpressionParameters");
+                    GUILayout.Label("*Note that if a copy already exists, it will be overwritten!", style4);
                 }
-                
-                if (isEng == 0)
-                {
-                    useOpLight = GUILayout.Toggle(useOpLight, "追加ライトをインストールする");
-                    GUILayout.Label("※主に撮影用を想定しています。常用は負荷の観点からお勧めしません。ExpressionMenuからOn/Offが可能です。", style4);
-                }
-                else
-                {
-                    useOpLight = GUILayout.Toggle(useOpLight, "Install Additional light.");
-                    GUILayout.Label("*For photography purposes primarily. Not recommended for daily use due to performance.This can be turned on or off from the ExpressionMenu.", style4);
-                }
-                
                 if (isEng == 0)
                 {
 
@@ -196,42 +205,10 @@ namespace nHaruka.PCSS4VRC
                 else
                 {
                     rmMats = GUILayout.Toggle(rmMats, "Remove old materials. (Affects Setup & Rmove)");
+
                     GUILayout.Label("*Note that if the generated material is shared with another avatar, the material reference of the other avatar will be lost!", style4);
                 }
 
-                GUILayout.Space(5);
-
-                foldout = EditorGUILayout.Foldout(foldout, "除外オブジェクト一覧 / Exclude Objects");
-
-                if (foldout)
-                {
-                    EditorGUI.indentLevel++;
-
-                    scroll2 = EditorGUILayout.BeginScrollView(scroll2, GUILayout.Height(80));
-
-                    for (int i = 0; i < excludeList.Count; i++)
-                    {
-                        EditorGUILayout.BeginHorizontal();
-                        excludeList[i] = (Renderer)EditorGUILayout.ObjectField(excludeList[i], typeof(Renderer), true);
-                        if (GUILayout.Button("削除 / Del", GUILayout.Width(60)))
-                        {
-                            excludeList.RemoveAt(i);
-                            EditorGUILayout.EndHorizontal();
-                            break;
-                        }
-                        EditorGUILayout.EndHorizontal();
-                    }
-                    GUILayout.EndScrollView();
-
-                    if (GUILayout.Button("除外リストを追加 / Add"))
-                    {
-                        excludeList.Add(null);
-                    }
-
-                    EditorGUI.indentLevel--;
-                }
-
-                GUILayout.Space(5);
 
                 GUI.backgroundColor = new Color(0.3f, 0.3f, 1f);
 
@@ -264,12 +241,7 @@ namespace nHaruka.PCSS4VRC
                     {
                         if (Setup(avatar, rmMats))
                         {
-                            if (useOnOff)
-                            {
-                                SetMaterialAnim();
-                            }
                             EditorUtility.DisplayDialog("Finished", "Finished!", "OK");
-                            
                         }
                         else
                         {
@@ -340,14 +312,14 @@ namespace nHaruka.PCSS4VRC
                 {
                     if (GUILayout.Button("簡単影設定ツールを起動する"))
                     {
-                        PCSS4VRC_ParameterSetter.Init();
+                        PCSS4VRC.PCSS4VRC_ParameterSetter.Init();
                     }
                 }
                 else
                 {
                     if (GUILayout.Button("Launch Easy Configuration Tool"))
                     {
-                        PCSS4VRC_ParameterSetter.Init();
+                        PCSS4VRC.PCSS4VRC_ParameterSetter.Init();
                     }
                 }
                 GUI.backgroundColor = Color.white;
@@ -393,31 +365,11 @@ namespace nHaruka.PCSS4VRC
                     Application.OpenURL("https://nharuka.booth.pm/items/4493526");
                 }
             }
-
-            GUILayout.EndScrollView();
         }
 
         void Refresh()
         {
             typeof(ShaderUtil).GetMethod("ClearCurrentShaderVariantCollection", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, new object[0]);
-        }
-
-        void SetMaterialAnim()
-        {
-            try
-            {
-                var animCreater = new PCSS4VRC_MaterialAnimationCreator();
-                animCreater.avatarDescriptor = avatar;
-                animCreater.propNames = new List<string> { "_IsOn" };
-                animCreater.minVal = new List<float> { 0f };
-                animCreater.maxVal = new List<float> { 1f };
-                animCreater.isToggle = new List<bool> { true };
-                animCreater.Setup();
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e.Message);
-            }
         }
 
         void SetupLayers()
@@ -466,6 +418,14 @@ namespace nHaruka.PCSS4VRC
 
         public bool Setup(VRCAvatarDescriptor avatarDescriptor, bool removeMaterials)
         {
+            /*
+            if (UseNGSS && !Directory.Exists("Assets/Psychose Interactive/NGSS"))
+            {
+                Debug.LogError("Could not find NGSS.");
+                return false;
+            }
+            */
+
             try
             {
                 Remove(avatarDescriptor, removeMaterials);
@@ -491,18 +451,7 @@ namespace nHaruka.PCSS4VRC
             settings.LIL_OPTIMIZE_APPLY_SHADOW_FA = true;
             //lilToonSetting.BuildShaderSettingString(settings, true);
             lilToonSetting.SaveShaderSetting(settings);
-            string shaderSettingString = lilToonSetting.BuildShaderSettingString(settings, true);
-
-            var rootPath = new[] { "Assets/nHaruka/PCSS4VRC/PCSS4lilToon/Shaders" };
-            var guids =  AssetDatabase.FindAssets("t:Shader", rootPath);
-
-            foreach (var guid in guids)
-            {
-                AssetDatabase.ImportAsset(AssetDatabase.GUIDToAssetPath(guid), ImportAssetOptions.ForceSynchronousImport);
-            }
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
-
+            lilToonInspector.ApplyShaderSetting(settings);
 
             if (useMA)
             {
@@ -516,46 +465,37 @@ namespace nHaruka.PCSS4VRC
             SelfLight.name = "SelfLight";
             SelfLight.transform.parent = avatarDescriptor.transform;
 
-            var animator = avatar.GetComponent<Animator>();
+            var TargetSphere = SelfLight.transform.Find("TargetSphere").GetComponent<ParentConstraint>();
+            TargetSphere.locked = true;
+            TargetSphere.constraintActive = true;
+            TargetSphere.SetSource(0, new ConstraintSource { weight = 1, sourceTransform = avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Head) });
+            TargetSphere.SetSource(1, new ConstraintSource { weight = 0, sourceTransform = avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Chest) });
+            TargetSphere.enabled = true;
 
-            var rootVRCconst = SelfLight.GetComponent<VRCPositionConstraint>();
-            rootVRCconst.Sources[0] = new VRC.Dynamics.VRCConstraintSource { Weight = 1.0f, SourceTransform = animator.GetBoneTransform(HumanBodyBones.Hips) };
+            var AimSphere = SelfLight.transform.Find("AimSphere").GetComponent<ParentConstraint>();
+            AimSphere.locked = true;
+            AimSphere.constraintActive = true;
+            AimSphere.SetSource(0, new ConstraintSource { weight = 1, sourceTransform = avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Head) });
+            AimSphere.SetSource(1, new ConstraintSource { weight = 0, sourceTransform = avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Chest) });
+            AimSphere.enabled = true;
 
-            var targetConst = SelfLight.transform.Find("TargetSphere").GetComponent<ParentConstraint>();
-            targetConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-            targetConst.SetSource(1, new ConstraintSource() { weight = 0, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Chest) });
+            var AutoLight = SelfLight.transform.Find("AutoLighting").GetComponent<ParentConstraint>();
+            AutoLight.locked = true;
+            AutoLight.constraintActive = true;
+            AutoLight.SetSource(0, new ConstraintSource { weight = 1, sourceTransform = avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Head) });
+            AutoLight.enabled = true;
 
-            var AimConst = SelfLight.transform.Find("AimSphere").GetComponent<ParentConstraint>();
-            AimConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-            AimConst.SetSource(1, new ConstraintSource() { weight = 0, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Chest) });
+            /*
+            var OffsettedRoot = SelfLight.transform.Find("OffsettedRoot").GetComponent<ParentConstraint>();
+            OffsettedRoot.locked = true;
+            OffsettedRoot.constraintActive = true;
+            OffsettedRoot.SetSource(0, new ConstraintSource { weight = 1, sourceTransform = avatarDescriptor.transform });
+            OffsettedRoot.enabled = true;
+            */
 
-            var OffsetedRootConst = SelfLight.transform.Find("OffsettedRoot").GetComponent<PositionConstraint>();
-            OffsetedRootConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-
-            var AutoLightingConst = SelfLight.transform.Find("AutoLighting").GetComponent<PositionConstraint>();
-            AutoLightingConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Neck) });
-
-            if(useOpLight)
-            {
-                var oPprefab = AssetDatabase.LoadAssetAtPath<UnityEngine.Object>("Assets/nHaruka/PCSS4VRC/OptionalLight.prefab");
-                var oPSelfLight = (GameObject)PrefabUtility.InstantiatePrefab(oPprefab);
-                oPSelfLight.name = "OptionalLight";
-                oPSelfLight.transform.parent = avatarDescriptor.transform;
-
-                var oProotVRCconst = oPSelfLight.GetComponent<VRCPositionConstraint>();
-                oProotVRCconst.Sources[0] = new VRC.Dynamics.VRCConstraintSource { Weight = 1.0f, SourceTransform = animator.GetBoneTransform(HumanBodyBones.Hips) };
-
-                var oPtargetConst = oPSelfLight.transform.Find("TargetSphere").GetComponent<ParentConstraint>();
-                oPtargetConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-                oPtargetConst.SetSource(1, new ConstraintSource() { weight = 0, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Chest) });
-
-                var oPAimConst = oPSelfLight.transform.Find("AimSphere").GetComponent<ParentConstraint>();
-                oPAimConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-                oPAimConst.SetSource(1, new ConstraintSource() { weight = 0, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Chest) });
-
-                var oPOffsetedRootConst = oPSelfLight.transform.Find("OffsettedRoot").GetComponent<PositionConstraint>();
-                oPOffsetedRootConst.SetSource(0, new ConstraintSource() { weight = 1, sourceTransform = animator.GetBoneTransform(HumanBodyBones.Head) });
-            }
+            var HipsAsRoot = SelfLight.GetComponent<VRCPositionConstraint>();
+            HipsAsRoot.Sources.Add(new VRCConstraintSource(avatarDescriptor.GetComponent<Animator>().GetBoneTransform(HumanBodyBones.Hips), 1, Vector3.zero, Vector3.zero));
+            HipsAsRoot.enabled = false;
 
             if (!useMA)
             {
@@ -697,11 +637,6 @@ namespace nHaruka.PCSS4VRC
 
             for (int r = 0; r < renderers.Length; r++)
             {
-                if (excludeList.Contains(renderers[r]))
-                {
-                    continue;
-                }
-
                 renderers[r].receiveShadows = true;
                 renderers[r].lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
 
@@ -738,6 +673,15 @@ namespace nHaruka.PCSS4VRC
                                 mats[i] = AssetDatabase.LoadAssetAtPath<Material>(MatPath.Replace(".asset", "_pcss.asset", StringComparison.OrdinalIgnoreCase));
                             }
 
+                            /*
+                            if (UseNGSS && mats[i] != null)
+                            {
+                                NGSS4lilToonInspector inspector = new NGSS4lilToonInspector();
+                                inspector.ConvertMaterialProxy(mats[i]);
+                                mats[i].SetFloat("_AlphaBoostFA", 1);
+                            }
+                            */
+
                             if (mats[i] != null)
                             {
                                 PCSS4lilToonInspector inspector = new PCSS4lilToonInspector();
@@ -752,6 +696,20 @@ namespace nHaruka.PCSS4VRC
                                 }
                             }
                         }
+                        /*
+                        else if (renderers[r].sharedMaterials[i].shader.name.Contains("lil") && renderers[r].sharedMaterials[i].shader.name.Contains("PCSS4lilToon") && UseNGSS == true)
+                        {
+                            mats[i] = renderers[r].sharedMaterials[i];
+                            var shader = Shader.Find(mats[i].shader.name.Replace("PCSS4lilToon", "NGSS4lilToon"));
+                            if (shader != null)
+                            {
+                                mats[i].shader = shader;
+                                mats[i].SetFloat("_AlphaBoostFA", 1);
+                                SetDefaultTextures(mats[i]);
+                                EditorUtility.SetDirty(mats[i]);
+
+                            }
+                        }*/
                         else if (renderers[r].sharedMaterials[i].shader.name.Contains("lil") && renderers[r].sharedMaterials[i].shader.name.Contains("NGSS4lilToon"))
                         {
                             mats[i] = renderers[r].sharedMaterials[i];
@@ -931,6 +889,17 @@ namespace nHaruka.PCSS4VRC
                     mat.SetTexture("_IgnoreCookieTexture", ignoreCookieTexture);
                 }
             }
+
+            /*
+            if (mat.shader.name.Contains("NGSS4lilToon") && mat.GetTexture("_BlueNoiseTexture") == null)
+            {
+                var BlueNoiseTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Psychose Interactive/NGSS/Resources/BlueNoise_R8_8.png");
+                if (BlueNoiseTexture != null)
+                {
+                    mat.SetTexture("_BlueNoiseTexture", BlueNoiseTexture);
+                }
+            }
+            */
 
         EditorUtility.SetDirty(mat);
         }

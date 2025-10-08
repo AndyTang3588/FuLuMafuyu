@@ -1,58 +1,53 @@
-﻿//----------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------
 // Macro
 
-#if defined(SPOT) && !defined(SHADOWS_SOFT)&& !defined(LIL_OUTLINE)
+#if defined(SPOT) && !defined(SHADOWS_SOFT)
 #define SHADOWS_SOFT
 #endif
 
+uniform float _IsOn = 1;
+uniform float NoShadowMode = 0;
+
 #include "UnityCG.cginc"
 
-uniform  float3 _normal;
-uniform  float3 _wpos;
-uniform  float _InterpolationStrength; 
-uniform  float _ShadowcoordzOffset;
-uniform  float _MinusNormalOffset;
-uniform  float _PlusNormalOffset;
-uniform  float _ShadingThreshold;
-uniform  float _ShadingCutOffThreshold;
-uniform  float _ShadingCutOffBlurRadius;
-uniform  float _ShadingBlurRadius;
+uniform float _EnvLightStrength = 0.3;
+uniform float _ShadowDistance = 10.0;
+uniform int _BlendOpFA;
+uniform float3 _DropShadowColor = float3(0, 0, 0);
+float shadowArea;
 
-#define LIL_CUSTOM_PROPERTIES \
-	float _IsOn;\
-	float NoShadowMode;\
-	float _EnvLightStrength;\
-	float _ShadowDistance;\
-	int _BlendOpFA;\
-	float3 _DropShadowColor;\
-	float shadowArea;\
-	float _EnableSurfaceSmoothing;\
-	float _ShadowClamp;\
-	float _ReceiveMaskStrength;\
-	float _CastMaskStrength;\
-	float _ShadowNormalBias;\
-	float _ShadowBias;\
-	float _ShadowDensity;\
-	float _NormalMapStrength;\
-	float _ShadowColorOverrideStrength;\
-	float4 _ShadowColorOverrideTexture_ST;\
-	float _ShadowBiasMaskStrength;\
-	float4 _ShadowBiasMaskTexture_ST;\
-	float4 _CastMaskTex_ST;\
-	float4 _ReceiveMaskTex_ST;
-	float _EnvLightAdjustLevel;
+float3 _normal;
+float3 _wpos;
 
-// Custom textures
-#define LIL_CUSTOM_TEXTURES \
-	Texture2D _ShadowColorOverrideTexture;\
-	sampler2D _ShadowBiasMaskTexture;\
-	sampler2D _CastMaskTex;\
-	sampler2D _IgnoreCookieTexture;\
-	Texture2D _ReceiveMaskTex;\	
-	sampler2D _EnvLightLevelTexture;
+uniform float _EnableSurfaceSmoothing = 1;
+uniform float _ShadowcoordzOffset = 0.01;
+uniform float _MinusNormalOffset = 0.08;
+uniform float _PlusNormalOffset = 0.001;
+uniform float _ShadingThreshold = 0.2;
+uniform float _ShadingCutOffThreshold = 0.7;
+uniform float _ShadingCutOffBlurRadius = 2;
+uniform float _ShadingBlurRadius = 2;
+uniform float _ShadowClamp = 0;
+uniform float _ReceiveMaskStrength = 1;
+uniform float _CastMaskStrength = 1;
+uniform float _ShadowNormalBias = 0.003;
+uniform float _ShadowBias = 0.0001;
+uniform float _ShadowDensity = 0;
+uniform float _InterpolationStrength = 1;
+
+uniform float _ShadowColorOverrideStrength;
+uniform sampler2D _ShadowColorOverrideTexture;
+uniform float4 _ShadowColorOverrideTexture_ST;
+
+uniform float _ShadowBiasMaskStrength;
+uniform sampler2D _ShadowBiasMaskTexture;
+uniform float4 _ShadowBiasMaskTexture_ST;
+
+uniform sampler2D _CastMaskTex;
+uniform float4 _CastMaskTex_ST;
 
 
-#if defined(SPOT) && defined(SHADOWS_DEPTH) && !defined(LIL_OUTLINE)
+#if defined(SPOT) && defined(SHADOWS_DEPTH)
 /*
 #undef DIRECTIONAL
 #undef DIRECTIONAL_COOKIE
@@ -69,7 +64,14 @@ uniform  float _ShadingBlurRadius;
 #undef SHADOWS_SHADOWMASK
 #undef LIGHTMAP_SHADOW_MIXING
 #undef LIGHTPROBE_SH
+
 */
+
+#define LIL_V2F_FORCE_POSITION_OS
+
+uniform sampler2D _IgnoreCookieTexture;
+uniform sampler2D _ReceiveMaskTex;
+uniform float4 _ReceiveMaskTex_ST;
 
 #include "Assets/nHaruka/PCSS4VRC/PCSSLogic/AutoLight_mod.cginc"
 
@@ -78,72 +80,27 @@ inline float InvLerp(float from, float to, float value)
 	return saturate(value - from) / saturate(to - from);
 }
 
-float2x2 inv2(float2x2 M, out float det) {
-	det = M._m00 * M._m11 - M._m01 * M._m10;
-	float invDet = 1.0 / max(abs(det), 1e-20);
-	return invDet * float2x2(M._m11, -M._m01, -M._m10, M._m00);
-}
-/*
-inline float3 curvatureInterpolation(float3 worldPos, float3 worldNormal)
-{
-	float3 normalNormalized = normalize(worldNormal);
+#define LIL_V2F_FORCE_NORMAL
 
-	float originalNormalLength = length(worldNormal);
-	
-	float3 Ps = ddx(worldPos);
-	float3 Pt = ddy(worldPos);
-	Ps -= normalNormalized * dot(Ps, normalNormalized);
-	Pt -= normalNormalized * dot(Pt, normalNormalized);
+#define LIL_CUSTOM_V2F_MEMBER(id0,id1,id2,id3,id4,id5,id6,id7)\
+	float4 positionOS : TEXCOORD ## id0;
 
-	float3 Ns = ddx(normalNormalized);
-	float3 Nt = ddy(normalNormalized);
-	Ns -= normalNormalized * dot(Ns, normalNormalized);
-	Nt -= normalNormalized * dot(Nt, normalNormalized);
+// Add vertex copy
+#define LIL_CUSTOM_VERT_COPY \
+	 output.positionOS = input.positionOS;
 
-	// 第一基本量 I
-	float a = dot(Ps, Ps);
-	float b = dot(Ps, Pt);
-	float c = dot(Pt, Pt);
-
-	// 第二基本量 II
-	float e = dot(Ns, Ps);
-	float f = dot(Ns, Pt);
-	float g = dot(Nt, Ps);
-	float h2 = dot(Nt, Pt);
-
-	float detI; 
-	float2x2 invI = inv2(float2x2(a, b, b, c), detI);
-
-	float2x2 II = float2x2(e, f, g, h2);
-
-	float2x2 S = mul(invI, II);
-
-	S = 0.5 * (S + transpose(S));        // 数値対称化
-
-	float H = 0.5 * (S._m00 + S._m11);   // 平均曲率（1/長さ）
-
-	if (H < 5) {
-		return worldPos;
-	}
-
-	float R = 1.0 / H;  // 符号付き曲率半径
-	float maxRadius = 1;  // メートル単位
-	R = min(abs(R), maxRadius);  // 絶対値で制限、符号を保持
-
-	float offset = R * (1.0 - originalNormalLength);
-	float3 targetPos = worldPos + normalNormalized * offset;
-
-	return lerp(worldPos, targetPos, _InterpolationStrength);
-}
-*/
 inline float3 curvatureInterpolation(float3 worldPos, float3 worldNormal)
 {
 	float3 normalNormalized = normalize(worldNormal);
 	float curvature = length(fwidth(normalNormalized)) / length(fwidth(worldPos));
-
+	
 	float3 interpolatedWorldPos = curvature < 0.01 ? worldPos : lerp(worldPos, worldPos + normalNormalized / (curvature) * (length(normalNormalized - worldNormal)), _InterpolationStrength);
+
 	return interpolatedWorldPos;
 }
+
+uniform sampler2D _EnvLightLevelTexture;
+uniform float _EnvLightAdjustLevel;
 
 /*
 inline float3 GetWorldPosFromDepth(float4 ScreenUV, float3 worldPos)
@@ -162,52 +119,35 @@ inline float3 GetWorldPosFromDepth(float4 ScreenUV, float3 worldPos)
 }
 */
 
-#define LIL_V2F_FORCE_TANGENT
-//#define LIL_V2F_FORCE_NORMAL
-//#define LIL_V2F_FORCE_POSITION_OS
-//#define LIL_V2F_FORCE_BITANGENT
-
 #define BEFORE_UNPACK_V2F \
-	float3 pre_normalmap = float3(0.0, 0.0, 1.0);\
-	if(_IsOn)\
-	{\ 
-		NoShadowMode = max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) <= 0.02 && max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) > 0.01 ? 1 : 0; \
-		NoShadowMode = saturate(NoShadowMode + step(_ShadowDistance, distance(_WorldSpaceLightPos0.xyz, input.positionWS))); \
-		_LightColor0.rgb = max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) <= 0.01 ? _LightColor0.rgb * 100 : NoShadowMode == 1 ? (_LightColor0.rgb - 0.01) * 100 : 0; \
-		LIL_UNPACK_TEXCOORD0(input, fd); \
-		LIL_UNPACK_TEXCOORD1(input, fd); \
-		LIL_COPY_VFACE(fd.facing); \
-		COMBINENORMAL \
-		CALC_TBN \
-		_normal = lerp(input.normalWS, pre_normal, _NormalMapStrength); \
-		input.positionWS = _InterpolationStrength > 0 ? curvatureInterpolation(input.positionWS, input.normalWS) : input.positionWS; \
-		_wpos = input.positionWS; \
-		_LightColor0.rgb = _LightColor0.rgb * lerp((tex2D(_EnvLightLevelTexture, half2(0.5, 0.5))).rgb, 1, 1 - _EnvLightAdjustLevel); \
-		float biasStrength = lerp(1, tex2D(_ShadowBiasMaskTexture, fd.uv0 * _ShadowBiasMaskTexture_ST.xy + _ShadowBiasMaskTexture_ST.zw).b, _ShadowBiasMaskStrength); \
-		_MinusNormalOffset *= biasStrength; \
-		_PlusNormalOffset *= biasStrength; \
-		_ShadowcoordzOffset *= biasStrength; \
-	}\
-	else \
-	{\
-		NoShadowMode = 1; \
-		_normal = input.normalWS;\
-		_wpos = input.positionWS; \
-	}
+	NoShadowMode =  max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) <= 0.02 && max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) > 0.01 ? 1 : 0;\
+	NoShadowMode = saturate(NoShadowMode + step(_ShadowDistance, distance(_WorldSpaceLightPos0.xyz,input.positionWS)));\
+	_LightColor0.rgb = max(max(_LightColor0.r, _LightColor0.g), _LightColor0.b) <= 0.01 ?  _LightColor0.rgb * 100 : NoShadowMode == 1 ? (_LightColor0.rgb - 0.01) * 100 : 0 ;\
+	_LightColor0.rgb = _LightColor0.rgb * _IsOn;\
+	LIL_UNPACK_TEXCOORD0(input,fd); \
+	LIL_UNPACK_TEXCOORD1(input,fd); \
+	_normal = input.normalWS;\
+	input.positionWS =  _InterpolationStrength > 0 ? curvatureInterpolation(input.positionWS, input.normalWS) : input.positionWS;\
+	_wpos = input.positionWS;\
+	_LightColor0.rgb = _LightColor0.rgb * lerp((tex2D(_EnvLightLevelTexture, half2(0.5, 0.5))).rgb, 1, 1 - _EnvLightAdjustLevel);\
+	float biasStrength = lerp(1, tex2D(_ShadowBiasMaskTexture, fd.uv0 * _ShadowBiasMaskTexture_ST.xy + _ShadowBiasMaskTexture_ST.zw).b, _ShadowBiasMaskStrength);\
+	_MinusNormalOffset *= biasStrength;\
+	_PlusNormalOffset *= biasStrength;\
+	_ShadowcoordzOffset *= biasStrength;
 
 #define BEFORE_SHADOW \
-	if(_IsOn)\
-	{\ 
-		float rcvMask = lerp(1,_ReceiveMaskTex.Sample(sampler_MainTex, fd.uv0 * _ReceiveMaskTex_ST.xy + _ReceiveMaskTex_ST.zw).r, _ReceiveMaskStrength); \
-		fd.attenuation = lerp(fd.attenuation, 1, 1 - rcvMask); \
-		fd.attenuation = (_ShadowClamp > 0) ? step(_ShadowClamp, fd.attenuation) : fd.attenuation; \
-		fd.attenuation = lerp(_ShadowDensity, 1, fd.attenuation); \
-		fd.lightColor = min(LIL_MAINLIGHT_COLOR * fd.attenuation, _LightMaxLimit); \
-		fd.lightColor = lerp(fd.lightColor, lilGray(fd.lightColor), _MonochromeLighting); \
-		fd.lightColor = lerp(fd.lightColor, 0.0, _AsUnlit); \
-		fd.lightColor = lerp(lerp(fd.lightColor, fd.lightColor * _DropShadowColor, (1 - fd.attenuation)), fd.lightColor, lerp(_ShadowDensity, 1, (1 - rcvMask))); \
-		fd.lightColor = fd.lightColor * lerp(1, _ShadowColorOverrideTexture.Sample(sampler_MainTex, fd.uv0 * _ShadowColorOverrideTexture_ST.xy + _ShadowColorOverrideTexture_ST.zw).rgb, _ShadowColorOverrideStrength * (1 - fd.attenuation));\
-	}
+	float rcvMask = lerp(1, tex2D(_ReceiveMaskTex, fd.uv0 * _ReceiveMaskTex_ST.xy + _ReceiveMaskTex_ST.zw).r, _ReceiveMaskStrength);\
+	fd.attenuation = lerp(fd.attenuation, 1, 1 - rcvMask);\
+	fd.attenuation = (_ShadowClamp > 0) ? step(_ShadowClamp ,fd.attenuation) : fd.attenuation ;\
+	fd.attenuation = lerp(_ShadowDensity, 1, fd.attenuation);\
+	fd.lightColor = min(LIL_MAINLIGHT_COLOR * fd.attenuation, _LightMaxLimit); \
+	fd.lightColor = lerp(fd.lightColor, lilGray(fd.lightColor), _MonochromeLighting); \
+	fd.lightColor = lerp(fd.lightColor, 0.0, _AsUnlit);\
+	fd.lightColor = lerp(lerp(fd.lightColor, fd.lightColor * _DropShadowColor, (1 - shadowArea) ),fd.lightColor ,lerp(_ShadowDensity, 1, (1 - rcvMask))) ;\
+    fd.lightColor = fd.lightColor * lerp(1, tex2D(_ShadowColorOverrideTexture, fd.uv0 * _ShadowColorOverrideTexture_ST.xy + _ShadowColorOverrideTexture_ST.zw).rgb, _ShadowColorOverrideStrength * (1 - shadowArea));
+
+
+
 
 inline float3 OffsetWorldPos(float3 worldPos)
 {
@@ -231,11 +171,11 @@ inline float3 OffsetWorldPos(float3 worldPos)
 
 #undef UNITY_LIGHT_ATTENUATION
 #define UNITY_LIGHT_ATTENUATION(destName, input, worldPos) \
-	float3 OffsettedWorldPos = NoShadowMode > 0 ? worldPos : OffsetWorldPos(worldPos); \
-	DECLARE_LIGHT_COORD(input, OffsettedWorldPos); \
+	float3 OffsettedWorldPos = OffsetWorldPos(worldPos); \
+	DECLARE_LIGHT_COORD(input, NoShadowMode < 1 ? OffsettedWorldPos : worldPos); \
 	shadowArea = 1; \
-	if (NoShadowMode < 1 ) { shadowArea = UNITY_SHADOW_ATTENUATION(input, OffsettedWorldPos); }\
-	fixed destName = (lightCoord.z > 0) *  tex2D(_IgnoreCookieTexture,  lightCoord.xy / lightCoord.w + 0.5).w * UnitySpotAttenuate(lightCoord.xyz) * shadowArea;
+	if (NoShadowMode < 1) { shadowArea = UNITY_SHADOW_ATTENUATION(input, OffsettedWorldPos); }\
+	fixed destName = (lightCoord.z > 0) *  tex2D(_IgnoreCookieTexture, lightCoord.xy / lightCoord.w + 0.5).w * UnitySpotAttenuate(lightCoord.xyz) * shadowArea;
 #endif
 
 
@@ -243,8 +183,8 @@ inline float3 OffsetWorldPos(float3 worldPos)
 #if defined (UNITY_PASS_SHADOWCASTER) 
 #define LIL_V2F_FORCE_NORMAL
 #define LIL_V2F_FORCE_TEXCOORD0
-	sampler2D _CastMaskTex;
-	float4 _CastMaskTex_ST;
+uniform sampler2D _CastMaskTex;
+uniform float4 _CastMaskTex_ST;
 #define BEFORE_UNPACK_V2F \
     LIL_UNPACK_TEXCOORD0(input,fd); \
     LIL_UNPACK_TEXCOORD1(input,fd); \
@@ -257,7 +197,10 @@ inline float3 OffsetWorldPos(float3 worldPos)
 //#define LIL_CUSTOM_PROPERTIES \
 //    float _CustomVariable;
 
+#define LIL_CUSTOM_PROPERTIES 
 
+// Custom textures
+#define LIL_CUSTOM_TEXTURES
 
 // Add vertex shader input
 //#define LIL_REQUIRE_APP_POSITION
@@ -286,53 +229,49 @@ inline float3 OffsetWorldPos(float3 worldPos)
 //#define LIL_CUSTOM_V2F_MEMBER(id0,id1,id2,id3,id4,id5,id6,id7)\
 	float4 positionOS : TEXCOORD ## id0;
 
-
 // Add vertex copy
 //#define LIL_CUSTOM_VERT_COPY \
 	 output.positionOS = input.positionOS;
 
-//#define LIL_CUSTOM_VERTEX_WS \
-
 //#define LIL_CUSTOM_VERTEX_OS \
+	unity_LightShadowBias.z = _ShadowNormalBias;
 
 // Inserting a process into pixel shader
 //#define BEFORE_xx
 //#define OVERRIDE_xx
 
 
-#if !defined(SPOT) || (defined(SPOT) && !defined(SHADOWS_DEPTH)) || defined(LIL_OUTLINE)
+#if !defined(SPOT) || (defined(SPOT) && !defined(SHADOWS_DEPTH))
 
-//#undef DIRECTIONAL
-//#undef DIRECTIONAL_COOKIE
-//#undef POINT_COOKIE
-//#undef POINT
-//#undef UNITY_NO_SCREENSPACE_SHADOWS
-//#undef UNITY_LIGHT_PROBE_PROXY_VOLUME
+#undef DIRECTIONAL
+#undef DIRECTIONAL_COOKIE
+#undef POINT_COOKIE
+#undef POINT
+#undef UNITY_NO_SCREENSPACE_SHADOWS
+#undef UNITY_LIGHT_PROBE_PROXY_VOLUME
 #undef SHADOWS_SOFT
 #undef SHADOWS_DEPTH
 #undef SHADOWS_SCREEN
 #undef SHADOWS_CUBE
-//#undef LIGHTMAP_ON
-//#undef VERTEXLIGHT_ON
-//#undef DIRLIGHTMAP_COMBINED
-//#undef DYNAMICLIGHTMAP_ON
-//#undef SHADOWS_SHADOWMASK
-//#undef LIGHTMAP_SHADOW_MIXING
-//#undef LIGHTPROBE_SH
+#undef LIGHTMAP_ON
+#undef VERTEXLIGHT_ON
+#undef DIRLIGHTMAP_COMBINED
+#undef DYNAMICLIGHTMAP_ON
+#undef SHADOWS_SHADOWMASK
+#undef LIGHTMAP_SHADOW_MIXING
+#undef LIGHTPROBE_SH
 
 #define LIL_V2F_POSITION_WS
 #define BEFORE_MAIN\
-		if(_IsOn)\
-		{\
-			float3 overrideCol = lerp(1, _ShadowColorOverrideTexture.Sample(sampler_MainTex,fd.uv0 * _ShadowColorOverrideTexture_ST.xy + _ShadowColorOverrideTexture_ST.zw).rgb, _ShadowColorOverrideStrength);\
-			fd.lightColor = (fd.lightColor.rgb  * _EnvLightStrength) * overrideCol;\
-		}
+		float3 overrideCol = lerp(1, tex2D(_ShadowColorOverrideTexture, fd.uv0 * _ShadowColorOverrideTexture_ST.xy + _ShadowColorOverrideTexture_ST.zw).rgb, _ShadowColorOverrideStrength);\
+		fd.lightColor = fd.lightColor.rgb * (1 - _IsOn) + _IsOn * (fd.lightColor.rgb  * _EnvLightStrength) * overrideCol;\
+		fd.indLightColor = fd.indLightColor.rgb * (1 - _IsOn) + _IsOn * (fd.indLightColor.rgb * _EnvLightStrength) * overrideCol;\
+		fd.addLightColor = fd.addLightColor.rgb * (1 - _IsOn) + _IsOn * (fd.addLightColor.rgb  * _EnvLightStrength) * overrideCol;
+//#define BEFORE_BACKLIGHT\
+		return fd.col;
 #endif
 
-/*
-fd.indLightColor = (fd.indLightColor.rgb * _EnvLightStrength) * overrideCol; \
-fd.addLightColor = (fd.addLightColor.rgb * _EnvLightStrength) * overrideCol; \
-*/
+
 
 //----------------------------------------------------------------------------------------------------------------------
 // Information about variables

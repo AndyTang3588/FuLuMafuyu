@@ -1,4 +1,4 @@
-﻿#ifndef LIL_PASS_SHADOWCASTER_INCLUDED
+#ifndef LIL_PASS_SHADOWCASTER_INCLUDED
 #define LIL_PASS_SHADOWCASTER_INCLUDED
 
 #include "Packages/jp.lilxyzw.liltoon/Shader/Includes/lil_common.hlsl"
@@ -62,62 +62,14 @@ uniform float _ShadowCasterBias;
 uniform float _ShadowCasterBiasOffset;
 
 
-float2x2 inv2(float2x2 M, out float det) {
-    det = M._m00 * M._m11 - M._m01 * M._m10;
-    float invDet = 1.0 / max(abs(det), 1e-20);
-    return invDet * float2x2(M._m11, -M._m01, -M._m10, M._m00);
-}
-
 inline float3 curvatureInterpolation(float3 worldPos, float3 worldNormal)
 {
     float3 normalNormalized = normalize(worldNormal);
+    float curvature = length(fwidth(normalNormalized)) / length(fwidth(worldPos));
 
-    float originalNormalLength = length(worldNormal);
+    float3 interpolatedWorldPos = curvature < 0.01 ? worldPos : lerp(worldPos, worldPos + normalNormalized / (curvature) * (length(normalNormalized - worldNormal)), _InterpolationStrength);
 
-    float3 Ps = ddx(worldPos);
-    float3 Pt = ddy(worldPos);
-    Ps -= normalNormalized * dot(Ps, normalNormalized);
-    Pt -= normalNormalized * dot(Pt, normalNormalized);
-
-    float3 Ns = ddx(normalNormalized);
-    float3 Nt = ddy(normalNormalized);
-    Ns -= normalNormalized * dot(Ns, normalNormalized);
-    Nt -= normalNormalized * dot(Nt, normalNormalized);
-
-    // 第一基本量 I
-    float a = dot(Ps, Ps);
-    float b = dot(Ps, Pt);
-    float c = dot(Pt, Pt);
-
-    // 第二基本量 II
-    float e = dot(Ns, Ps);
-    float f = dot(Ns, Pt);
-    float g = dot(Nt, Ps);
-    float h2 = dot(Nt, Pt);
-
-    float detI;
-    float2x2 invI = inv2(float2x2(a, b, b, c), detI);
-
-    float2x2 II = float2x2(e, f, g, h2);
-
-    float2x2 S = mul(invI, II);
-
-    S = 0.5 * (S + transpose(S));        // 数値対称化
-
-    float H = 0.5 * (S._m00 + S._m11);   // 平均曲率（1/長さ）
-
-    if (H < 1e-5) {
-        return worldPos;
-    }
-
-    float R = 1.0 / H;  // 符号付き曲率半径
-    float maxRadius = 100;  // メートル単位
-    R = sign(R) * min(abs(R), maxRadius);  // 絶対値で制限、符号を保持
-
-    float offset = R * (1.0 - originalNormalLength);
-    float3 targetPos = worldPos + normalNormalized * offset;
-
-    return lerp(worldPos, targetPos, _InterpolationStrength);
+    return interpolatedWorldPos;
 }
 
 //------------------------------------------------------------------------------------------------------------------------------
@@ -143,8 +95,7 @@ float4 frag(v2f input LIL_VFACE(facing), inout float depth: SV_Depth) : SV_Targe
 
     float offsetAmount = -saturate(NdotL - _ShadowCasterBiasOffset) * _ShadowCasterBias * biasStrength.r;
 
-    //float3 interpolatedWpos = curvatureInterpolation(input.positionWS, input.normalWS);
-    float3 interpolatedWpos = input.positionWS;
+    float3 interpolatedWpos = _InterpolationStrength > 0 ? curvatureInterpolation(input.positionWS, input.normalWS) : input.positionWS;
 
     float3 offsetPos = interpolatedWpos + normalize(input.normalWS) * offsetAmount;
     
@@ -166,9 +117,9 @@ float4 frag(v2f input LIL_VFACE(facing), inout float depth: SV_Depth) : SV_Targe
     
     float castMask = lerp(1, tex2D(_CastMaskTex, input.uv01.xy * _CastMaskTex_ST.xy + _CastMaskTex_ST.zw).r, _CastMaskStrength) - 0.5f;
 
-    depth = castMask < 0 ? 1 : depth;
-
     clip(castMask);
+
+    depth = castMask < 0 ? 1 : depth;
 
     BEFORE_UNPACK_V2F
     OVERRIDE_UNPACK_V2F

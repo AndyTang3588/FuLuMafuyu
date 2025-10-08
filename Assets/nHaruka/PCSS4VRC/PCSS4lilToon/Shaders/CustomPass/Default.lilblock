@@ -1,4 +1,4 @@
-﻿    SubShader
+    SubShader
     {
         HLSLINCLUDE
             *LIL_SHADER_SETTING*
@@ -226,7 +226,7 @@
             #pragma vertex vert
             #pragma fragment frag
             #pragma lil_multi_compile_shadowcaster
-            #pragma skip_variants POINT POINT_COOKIE SHADOWS_SCREEN DIRECTIONAL DIRECTIONAL_COOKIE SHADOWS_CUBE LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH
+            #pragma skip_variants POINT POINT_COOKIE SHADOWS_SCREEN DIRECTIONAL DIRECTIONAL_COOKIE SHADOWS_CUBE LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_CUBE VERTEXLIGHT_ON
 
             //----------------------------------------------------------------------------------------------------------------------
             // Pass
@@ -251,6 +251,16 @@
             Offset 1, 1
             Cull [_Cull]
 
+            /*
+            Stencil
+            {
+                Ref 125 
+                Comp Always
+                Pass Replace
+                ZFail Keep
+            }
+            */
+
             HLSLPROGRAM
 
             //----------------------------------------------------------------------------------------------------------------------
@@ -258,7 +268,7 @@
             #pragma vertex vert
             #pragma fragment frag
             #pragma lil_multi_compile_shadowcaster
-            #pragma skip_variants POINT POINT_COOKIE SHADOWS_SCREEN DIRECTIONAL DIRECTIONAL_COOKIE SHADOWS_CUBE LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH
+            #pragma skip_variants POINT POINT_COOKIE SHADOWS_SCREEN DIRECTIONAL DIRECTIONAL_COOKIE SHADOWS_CUBE LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_CUBE VERTEXLIGHT_ON
 
             //----------------------------------------------------------------------------------------------------------------------
             // Pass

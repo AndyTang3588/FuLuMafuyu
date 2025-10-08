@@ -50,7 +50,6 @@ namespace lilToon
         MaterialProperty _InterpolationStrength;
         MaterialProperty PenumbraWithMaxSamples;
         MaterialProperty MaxDistance;
-        MaterialProperty _NormalMapStrength;
 
         private static bool isShowCustomProperties = true;
         private const string shaderName = "PCSS4VRC/PCSS4lilToon";
@@ -111,7 +110,6 @@ namespace lilToon
             _ShadowColorOverrideTexture = FindProperty("_ShadowColorOverrideTexture", props);
             _ShadowColorOverrideStrength = FindProperty("_ShadowColorOverrideStrength", props);
             _InterpolationStrength = FindProperty("_InterpolationStrength", props);
-            _NormalMapStrength = FindProperty("_NormalMapStrength", props);
 
             if (_EnvLightLevelTexture.textureValue == null)
             {
@@ -187,7 +185,6 @@ namespace lilToon
                 m_MaterialEditor.ShaderProperty(_ShadowDistance, new GUIContent("Shadow Distance", "影を無効化する距離です。この距離以上離れると影が表示されなくなります。0にするとこの機能を無効化します。単位はメートル"));
                 m_MaterialEditor.ShaderProperty(_ShadowClamp, new GUIContent("Shadow Clamp", "この値をしきい値に影を2値化します。0で無効。アニメ調用途想定（Shadow Clampを0.85、Shadow Softnessはどちらも0.02、Shadow Normal Biasは0に近くを推奨）"));
                 m_MaterialEditor.ShaderProperty(_ShadowDensity, new GUIContent("Shadow Density", "影の濃さ"));
-                m_MaterialEditor.ShaderProperty(_NormalMapStrength, new GUIContent("NormalMap Strength", "影に対するノーマルマップの影響度"));
                 m_MaterialEditor.ShaderProperty(_DropShadowColor, new GUIContent("Shadow Color", "影の色を加算します。"));
                 m_MaterialEditor.ShaderProperty(_EnvLightAdjustLevel, new GUIContent("Auto Light Color Adjusting Level", "自動ライトカラー調整機能の強さです。"));
 
@@ -400,10 +397,6 @@ namespace lilToon
                     {
                         mat.SetFloat("PCF_GradientBias", PCF_GradientBias.floatValue);
                     }
-                    if (!mat.IsPropertyLocked("_NormalMapStrength"))
-                    {
-                        mat.SetFloat("_NormalMapStrength", _NormalMapStrength.floatValue);
-                    }
 
 #else
                     mat.SetFloat("_IsOn", (int)_IsOn.floatValue);
@@ -534,7 +527,6 @@ namespace lilToon
                 }
             }
         }
-
         public void ConvertMaterialProxy(Material material)
         {
             this.ConvertMaterialToCustomShader(material);
