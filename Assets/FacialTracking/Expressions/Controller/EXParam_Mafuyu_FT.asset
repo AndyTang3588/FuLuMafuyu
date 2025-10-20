@@ -573,7 +573,7 @@ MonoBehaviour:
     valueType: 0
     saved: 1
     defaultValue: 1
-    networkSynced: 1
+    networkSynced: 0
   - name: "\u98CE\u683C\u5207\u6362"
     valueType: 2
     saved: 1
@@ -589,13 +589,33 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: Hair1
-    valueType: 2
+  - name: "\u5934\u53D1"
+    valueType: 0
     saved: 1
     defaultValue: 0
-    networkSynced: 1
-  - name: Hair2
+    networkSynced: 0
+  - name: "\u5934\u53D1_1"
     valueType: 2
-    saved: 1
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: "\u5934\u53D1_2"
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: "\u8863\u670D_1"
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: "\u8863\u670D_2"
+    valueType: 2
+    saved: 0
+    defaultValue: 0
+    networkSynced: 1
+  - name: "\u8863\u670D_3"
+    valueType: 2
+    saved: 0
     defaultValue: 0
     networkSynced: 1
