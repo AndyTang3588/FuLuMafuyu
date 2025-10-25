@@ -1,0 +1,20 @@
+{
+    "name": "wataameya.motchiri_shader.ndmf",
+    "references": [
+        "GUID:1eff9dcccc7e3e147a7807dbec434f0d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "VRCSDK3A.dll",
+        "VRCSDKBase.dll",
+        "VRC.Collections.dll",
+        "VRC.Dynamics.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

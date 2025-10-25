@@ -1,0 +1,36 @@
+{
+    "name": "ZeroFactory.AvatarPoseSystem.NDMF.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fc900867c0f47cd49b6e2ae4ef907300",
+        "GUID:5ce33783346c3124990afbe7b0390a06",
+        "GUID:fe747755f7b44e048820525b07f9b956",
+        "GUID:62ced99b048af7f4d8dfe4bed8373d76",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:bf1280816b84298468cf9af9aaf438dd",
+        "GUID:046a3a3b70762e740981b2eec19118e8"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "VRCSDK3A.dll",
+        "VRCSDKBase.dll",
+        "VRC.Dynamics.dll",
+        "VRC.SDK3.Dynamics.PhysBone.dll",
+        "VRC.SDK3.Dynamics.Constraint.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "nadena.dev.ndmf",
+            "expression": "1.2.0",
+            "define": "USE_NDMF"
+        }
+    ],
+    "noEngineReferences": false
+}

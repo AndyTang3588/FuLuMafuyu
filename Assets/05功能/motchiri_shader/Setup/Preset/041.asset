@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0239fa3ef64f541858f70c0ccf07c7, type: 3}
+  m_Name: 041
+  m_EditorClassIdentifier: 
+  avatarName: "\u30EB\u30FC\u30B7\u30E5\u30AB Rushka"
+  radius: 0.5
+  strength: 0.5
+  mesh0Path: Body all
+  mesh0Mask: {fileID: 2800000, guid: 5cb3a22a60ee9094bb8c96a2ea2952d5, type: 3}
+  mesh0MaterialSlot: 0
+  mesh0IsTessellation: 1
+  mesh1Path: Face
+  mesh1Mask: {fileID: 2800000, guid: 4d9d0b4ef8e1b0c4c8367db5e3e9929f, type: 3}
+  mesh1MaterialSlot: 0
+  mesh1IsTessellation: 0
+  mesh2Path: 
+  mesh2Mask: {fileID: 0}
+  mesh2MaterialSlot: 0
+  mesh2IsTessellation: 0

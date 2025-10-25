@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0239fa3ef64f541858f70c0ccf07c7, type: 3}
+  m_Name: 014
+  m_EditorClassIdentifier: 
+  avatarName: "\u97FF\u72D0\u30EA\u30AF Liqu"
+  radius: 0.5
+  strength: 0.5
+  mesh0Path: Skin_Full
+  mesh0Mask: {fileID: 2800000, guid: 332f18a73939edc40811cfd7ea98db97, type: 3}
+  mesh0MaterialSlot: 0
+  mesh0IsTessellation: 1
+  mesh1Path: 
+  mesh1Mask: {fileID: 0}
+  mesh1MaterialSlot: 0
+  mesh1IsTessellation: 0
+  mesh2Path: 
+  mesh2Mask: {fileID: 0}
+  mesh2MaterialSlot: 0
+  mesh2IsTessellation: 0

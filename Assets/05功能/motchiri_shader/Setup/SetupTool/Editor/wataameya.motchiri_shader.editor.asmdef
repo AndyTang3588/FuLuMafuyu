@@ -1,0 +1,30 @@
+{
+    "name": "wataameya.motchiri_shader.editor",
+    "references": [
+        "GUID:fc900867c0f47cd49b6e2ae4ef907300",
+        "GUID:5ce33783346c3124990afbe7b0390a06",
+        "GUID:1eff9dcccc7e3e147a7807dbec434f0d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "VRCSDK3A.dll",
+        "VRCSDKBase.dll",
+        "VRC.Collections.dll",
+        "VRC.Dynamics.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "nadena.dev.modular-avatar",
+            "expression": "1.4.0",
+            "define": "USE_MA"
+        }
+    ],
+    "noEngineReferences": false
+}

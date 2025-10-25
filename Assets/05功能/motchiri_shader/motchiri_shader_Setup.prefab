@@ -1,0 +1,467 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2241318285660066580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4150504712388543365}
+  - component: {fileID: 7751393506028338260}
+  m_Layer: 0
+  m_Name: motchiri_shader_Setup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4150504712388543365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241318285660066580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7751393506028338260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2241318285660066580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99cb8d2623d0c19498da0b15aa698249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _avatar: {fileID: 0}
+  _index: 0
+  _previndex: -1
+  _meshRenderer:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _meshMask:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _meshMaterialSlot: 000000000000000000000000
+  _meshIsTessellation: 000000
+  _effect: 0.5
+  _strength: 0.5
+  _ao: 0.5
+  _blur: 0.5
+  _color: {r: 0.984, g: 0.855, b: 0.792, a: 1}
+  _oldver: 0
+  _depth: 0
+  _func1: 1
+  _func2: 1
+  _func3: 1
+  _normal: 1
+  _normalFunction: 0.01
+  _useEXCollider: 0
+  _exScalingFactor: 1
+  _radius: 0.75
+  _unit: 0.05
+  _presets:
+  - {fileID: 11400000, guid: 913a780a90602304683fe6b67428094f, type: 2}
+  - {fileID: 11400000, guid: b2fe5299793fb4b4e9f7c3cabb0dcf6d, type: 2}
+  - {fileID: 11400000, guid: ab0a3ea9b7d3660419ca7657506f6858, type: 2}
+  - {fileID: 11400000, guid: 281b5c16e85714a4badd84bb66494245, type: 2}
+  - {fileID: 11400000, guid: 8bffb752f7e50e54693ab2d1bb0ce452, type: 2}
+  - {fileID: 11400000, guid: fcfeeea27143fb6468015d0164df6a1e, type: 2}
+  - {fileID: 11400000, guid: cc4bc72724fdd0f4ab6adbdab2620b90, type: 2}
+  - {fileID: 11400000, guid: d4f27255a1a3425409ed91e7f7e0f133, type: 2}
+  - {fileID: 11400000, guid: e65a3ad60a454ea46ad7535396cd1a2f, type: 2}
+  - {fileID: 11400000, guid: 1d5d45eab7b63fd4cb64a0bf1f0c3861, type: 2}
+  - {fileID: 11400000, guid: 9e7b245ebdbdd4f4a8a888c5d9934ce8, type: 2}
+  - {fileID: 11400000, guid: aa860c1d82f5ef94182572e25bfa7fde, type: 2}
+  - {fileID: 11400000, guid: 1af3967833e7547469ea61d61d772bb1, type: 2}
+  - {fileID: 11400000, guid: b52992ccc19de714a82bf07494c4c4cc, type: 2}
+  - {fileID: 11400000, guid: 143de8f39cc1fac428a09bebf6278b43, type: 2}
+  - {fileID: 11400000, guid: 39fc2873cd807384d9b226624bd4bc4c, type: 2}
+  - {fileID: 11400000, guid: 4429727c766b7554ba2977f996c8477f, type: 2}
+  - {fileID: 11400000, guid: 4f3f417810de80547b4075455d6e94d5, type: 2}
+  - {fileID: 11400000, guid: b6c56948215d4134e95108ef9a86d59f, type: 2}
+  - {fileID: 11400000, guid: 68c78197725d67245adca9040ac8198b, type: 2}
+  - {fileID: 11400000, guid: 9edebe38d5b3faf4eaa60a8d23843d14, type: 2}
+  - {fileID: 11400000, guid: 4e1d4da246c82824d98e6cc4856b52bf, type: 2}
+  - {fileID: 11400000, guid: a4a73dc0875553d4dbcb3d69c0ad41ff, type: 2}
+  - {fileID: 11400000, guid: 7a046a68790df7e44aef444ba25cb3c0, type: 2}
+  - {fileID: 11400000, guid: 128e3d4e5fc6474429e8f84fc8a30023, type: 2}
+  - {fileID: 11400000, guid: a792f5e2a2968f44388f071ce48ee7d5, type: 2}
+  - {fileID: 11400000, guid: 8bd598ce7a6978945add4caced9347b5, type: 2}
+  - {fileID: 11400000, guid: 2c639fb5c610faf44861abb156da73c0, type: 2}
+  - {fileID: 11400000, guid: e9f6a2c32e81b214da8a24216beb1eb4, type: 2}
+  - {fileID: 11400000, guid: a83c4cf6098b0054abd39471e173bccf, type: 2}
+  - {fileID: 11400000, guid: 84fbe28d3a2305e428f3943ea7cc6141, type: 2}
+  - {fileID: 11400000, guid: 15c4e58c262ec6343b3f79885daea163, type: 2}
+  - {fileID: 11400000, guid: 1b7404ae21df0274dac17ec127cfce71, type: 2}
+  - {fileID: 11400000, guid: 2947ba6d9f43d0945a444a14ed87fb7a, type: 2}
+  - {fileID: 11400000, guid: a7d45d07d550e6546a08c65204ff5225, type: 2}
+  - {fileID: 11400000, guid: 355b0d33e95fd8242ba06fae722f041c, type: 2}
+  - {fileID: 11400000, guid: 1a7908d4529de2c45886687bf40f0384, type: 2}
+  - {fileID: 11400000, guid: dca8697d8d6e00143b69902fccf00d9e, type: 2}
+  - {fileID: 11400000, guid: 25ff86b0cb451e346b4385d1bdc15913, type: 2}
+  - {fileID: 11400000, guid: 22d51cfd9f1f8af459b4395d29ccbef9, type: 2}
+  - {fileID: 11400000, guid: 4fe07897a8696144b8c7d8210061d7dd, type: 2}
+  - {fileID: 11400000, guid: 52c8efb87b9607543ac68f92b3c8b1ee, type: 2}
+  - {fileID: 11400000, guid: 31ecb9f74cc9e4c4fb2a820c2e1f86b6, type: 2}
+  - {fileID: 11400000, guid: 804ac27c73d42684cb87f91148f4f84f, type: 2}
+  - {fileID: 11400000, guid: a08142af92b6fc34fa26627ddbcc1547, type: 2}
+  - {fileID: 11400000, guid: 3c68c7a9d86e44f42b9840ab5dad3eda, type: 2}
+  - {fileID: 11400000, guid: b7370a03502e9e04085fb653aa644932, type: 2}
+  - {fileID: 11400000, guid: e99880e7effb0b94fbdca18225982916, type: 2}
+  - {fileID: 11400000, guid: 442273719144c1c458d63d78b7503633, type: 2}
+  - {fileID: 11400000, guid: adda6b1badeea07429c75d26669693aa, type: 2}
+  - {fileID: 11400000, guid: 392651daa0acc1f4ca6c1cf03bef457e, type: 2}
+  - {fileID: 11400000, guid: bcb89021a84472c44a37bcb7f5c8737d, type: 2}
+  - {fileID: 11400000, guid: 904f5093c81daf94f8331b73c34dd02a, type: 2}
+  - {fileID: 11400000, guid: 2ad8801e674a6f2419c31385cca9586d, type: 2}
+  - {fileID: 11400000, guid: dd86f8e626c30c741a70a5a7642fdfaf, type: 2}
+  - {fileID: 11400000, guid: 489dc2a5e2f12d344b362b3de14bc148, type: 2}
+  - {fileID: 11400000, guid: 1315ca22a43d1a743960aef812ad878e, type: 2}
+  - {fileID: 11400000, guid: ddf17d972e7a39947a842fc181d17be5, type: 2}
+  - {fileID: 11400000, guid: e3cb5493b7f84ae45ac32deeb8abe9af, type: 2}
+  - {fileID: 11400000, guid: e448946da59d1f945b59993ebd70279c, type: 2}
+  - {fileID: 11400000, guid: 878064bd51c527441b8b17aec0a23be4, type: 2}
+  - {fileID: 11400000, guid: 9075b5b3ff253c444b921a32c42fc04d, type: 2}
+  - {fileID: 11400000, guid: faf6519c2a2584f4a9694c63ee451cce, type: 2}
+  - {fileID: 11400000, guid: f12da0044eff33d4c8fef5d5251e404f, type: 2}
+  - {fileID: 11400000, guid: 393e92526f905df4e9adbd4627299801, type: 2}
+  - {fileID: 11400000, guid: 8a729eeae5595074c9a647a3b60a3c01, type: 2}
+  - {fileID: 11400000, guid: 341cddf60f156be47a3838c89c2b211b, type: 2}
+  _texts0:
+  - 
+  - "\u65E5\u672C\u8A9E"
+  - "\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u3092\u30BB\u30C3\u30C8\u30A2\u30C3\u30D7\u3057\u307E\u3059\u3002"
+  - "\u30A2\u30D0\u30BF\u30FC"
+  - "\u30D7\u30EA\u30BB\u30C3\u30C8\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044\u3002\u975E\u5BFE\u5FDC\u30A2\u30D0\u30BF\u30FC\u306E\u5834\u5408\u306F\u8AAC\u660E\u66F8\u3092\u53C2\u7167\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u30D7\u30EA\u30BB\u30C3\u30C8"
+  - 
+  - 
+  - 
+  - 
+  - "\u30B7\u30A7\u30FC\u30C0\u30FC\u9069\u7528\u7B87\u62401"
+  - "\u30B7\u30A7\u30FC\u30C0\u30FC\u9069\u7528\u7B87\u62402"
+  - "\u30B7\u30A7\u30FC\u30C0\u30FC\u9069\u7528\u7B87\u62403"
+  - "\u30E1\u30C3\u30B7\u30E5"
+  - "\u7BC4\u56F2\u6307\u5B9A\u30DE\u30B9\u30AF"
+  - "\u30DE\u30C6\u30EA\u30A2\u30EB\u30B9\u30ED\u30C3\u30C8\u756A\u53F7"
+  - "\u7D30\u5206\u5316(\u9AD8\u8CA0\u8377)"
+  - 
+  - 
+  - 
+  - "\u3082\u3063\u3061\u308A\u306E\u5F37\u3055"
+  - "\u52B9\u679C\u7BC4\u56F2"
+  - "\u5F71\u306E\u5F37\u3055"
+  - "\u306B\u3058\u307F\u7BC4\u56F2"
+  - "\u5F71\u306E\u8272"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u3082\u3063\u3061\u308A\u5224\u5B9A\u8ABF\u6574\u30D1\u30E9\u30E1\u30FC\u30BF"
+  - 
+  - "\u6CD5\u7DDA\u4FEE\u6B63"
+  - "\u6CD5\u7DDA\u4FEE\u6B63\u30D1\u30E9\u30E1\u30FC\u30BF"
+  - "EX\u30B3\u30E9\u30A4\u30C0\u30FC\u4F7F\u7528"
+  - "EX\u30B3\u30E9\u30A4\u30C0\u30FC\u306E\u30B9\u30B1\u30FC\u30EA\u30F3\u30B0\u30D5\u30A1\u30AF\u30BF\u30FC"
+  - "\u30B3\u30F3\u30BF\u30AF\u30C8\u306E\u7BC4\u56F2"
+  - "\u30B3\u30F3\u30BF\u30AF\u30C8\u306E\u914D\u7F6E\u534A\u5F84"
+  - "\u65E7\u4ED5\u69D8"
+  - 
+  - "\u9AD8\u5EA6\u306A\u8A2D\u5B9A"
+  - "\u3082\u3063\u3061\u308A\u30D1\u30E9\u30E1\u30FC\u30BF1"
+  - "\u3082\u3063\u3061\u308A\u30D1\u30E9\u30E1\u30FC\u30BF2"
+  - "\u3082\u3063\u3061\u308A\u30D1\u30E9\u30E1\u30FC\u30BF3"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "VRCAvatarDescriptor\u30B3\u30F3\u30DD\u30FC\u30CD\u30F3\u30C8\u304C\u8A2D\u5B9A\u3055\u308C\u305F\u30A2\u30D0\u30BF\u30FC\u306B\u5165\u308C\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u5FC5\u8981\u306A\u30D1\u30C3\u30B1\u30FC\u30B8\u304C\u30A4\u30F3\u30DD\u30FC\u30C8\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002\u8AAC\u660E\u66F8\u306B\u5F93\u3063\u3066\u30A4\u30F3\u30DD\u30FC\u30C8\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u8AAC\u660E\u66F8"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u30A2\u30D0\u30BF\u30FC\u306B\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC(\u65E7\u65B9\u5F0F)\u304C\u8A2D\u5B9A\u3055\u308C\u3066\u3044\u307E\u3059\u3002\u8AAC\u660E\u66F8\u306B\u5F93\u3063\u3066\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u3092\u5916\u3057\u3066\u4E0B\u3055\u3044\u3002"
+  - "prefab\u304C\u53D6\u5F97\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F\u3002"
+  - "Animator\u304C\u53D6\u5F97\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F\u3002"
+  - "\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u3092\u9069\u7528\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F\u3002\u30B7\u30A7\u30FC\u30C0\u30FC\u306B\u306FlilToon\u3092\u4F7F\u7528\u3057\u3066\u304F\u3060\u3055\u3044\u3002(\u30EA\u30A2\u30EB\u5F71\u30B7\u30B9\u30C6\u30E0\u306A\u3069\u306E\u30AB\u30B9\u30BF\u30E0\u30B7\u30A7\u30FC\u30C0\u30FC\u3068\u306F\u4F75\u7528\u3067\u304D\u307E\u305B\u3093)"
+  - "\u30B7\u30A7\u30FC\u30C0\u30FC\u9069\u7528\u7B87\u6240\u304C\u8A2D\u5B9A\u3055\u308C\u3066\u3044\u307E\u305B\u3093\u3002\u30D7\u30EA\u30BB\u30C3\u30C8\u3092\u9078\u3076\u304B\u3001\u624B\u52D5\u3067\u8A2D\u5B9A\u3057\u3066\u4E0B\u3055\u3044\u3002"
+  - "\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u306E\u30DE\u30B9\u30AF\u306EMipStreaming\u304C\u30AA\u30D5\u306B\u306A\u3063\u3066\u3044\u307E\u3059\u3002\u4ED6\u306E\u30DE\u30B9\u30AF\u3092\u53C2\u8003\u306B\u8A2D\u5B9A\u3092\u5909\u66F4\u3057\u3066\u4E0B\u3055\u3044\u3002"
+  - 
+  - 
+  - 
+  - 
+  - "\u30A6\u30A3\u30F3\u30C9\u30A6\u304B\u3089\u306E\u8A2D\u5B9A\u306F\u975E\u5BFE\u5FDC\u3068\u306A\u308A\u307E\u3057\u305F\u3002
+    \u65B0\u3057\u3044\u8A2D\u5B9A\u65B9\u6CD5\u306F\u30DE\u30CB\u30E5\u30A2\u30EB\u3092\u53C2\u7167\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+  - "\u3082\u3063\u3061\u308A\u30B7\u30A7\u30FC\u30C0\u30FC\u8AAC\u660E\u66F8"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  _texts1:
+  - 
+  - English
+  - Set up a motchiri shader.
+  - Avatar
+  - "Choose a preset. For unsupported avatars\uFF0C please refer to the instructions."
+  - Preset
+  - 
+  - 
+  - 
+  - 
+  - Shader application point 1
+  - Shader application point 2
+  - Shader application point 3
+  - Mesh
+  - Range Mask
+  - Material slot number
+  - Tessellation (high load)
+  - 
+  - 
+  - 
+  - Strength
+  - Effect range
+  - Shadow strength
+  - Smudge range
+  - Shadow color
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Adjustment Parameters
+  - 
+  - Normal correction
+  - Normal correction parameter
+  - Use EX collider
+  - EX collider scaling factor
+  - Contact range
+  - Contact placement radius
+  - Old version
+  - 
+  - Advanced Settings
+  - Motchiri Parameter 1
+  - Motchiri Parameter 2
+  - Motchiri Parameter 3
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Put in avatar with VRCAvatarDescriptor component set.
+  - The required package has not been imported. Please import them according to the
+    instructions.
+  - Motchiri shader instruction manual
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Your avatar is set up with the Mochiri-Shader (old method). Please remove the
+    Mochiri shader according to the instructions.
+  - Could not get prefab.
+  - Could not get Animator.
+  - Could not apply the Mochiri shader. Please use lilToon for shaders. (Cannot be
+    used with custom shaders such as PCSS.)
+  - The shader application point is not set. Please select a preset or set it manually.
+  - MipStreaming in the Mochiri shader mask is turned off. Please change the setting
+    referring to the other masks.
+  - 
+  - 
+  - 
+  - 
+  - Setting from the window is no longer supported. Please refer to the manual for
+    the new setting method.
+  - Motchiri shader manual
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  _texts2:
+  - 
+  - "\uD55C\uAD6D\uC5B4"
+  - "\uB354 \uB9CE\uC740 \uC170\uC774\uB354\uB97C \uC124\uC815\uD569\uB2C8\uB2E4."
+  - "\uC544\uBC14\uD0C0"
+  - "\uD504\uB9AC\uC14B\uC744 \uC120\uD0DD\uD569\uB2C8\uB2E4. \uC9C0\uC6D0\uB418\uC9C0
+    \uC54A\uB294 \uC544\uBC14\uD0C0\uC758 \uACBD\uC6B0 \uC124\uBA85\uC11C\uB97C \uCC38\uACE0\uD558\uC138\uC694."
+  - "\uD504\uB9AC\uC14B"
+  - 
+  - 
+  - 
+  - 
+  - "\uC170\uC774\uB354 \uC801\uC6A9 \uC704\uCE581"
+  - "\uC170\uC774\uB354 \uC801\uC6A9 \uC704\uCE582"
+  - "\uC170\uC774\uB354 \uC801\uC6A9 \uC704\uCE583"
+  - "\uBA54\uC26C"
+  - "\uBC94\uC704 \uC9C0\uC815 \uB9C8\uC2A4\uD06C"
+  - "\uBA38\uD2F0\uB9AC\uC5BC \uC2AC\uB86F \uBC88\uD638"
+  - "\uC138\uBD84\uD654(\uACE0\uBD80\uD558)"
+  - 
+  - 
+  - 
+  - "\uCD18\uCD18\uD568 \uAC15\uB3C4"
+  - "\uD6A8\uACFC \uBC94\uC704"
+  - "\uADF8\uB9BC\uC790 \uAC15\uB3C4"
+  - "\uBC88\uC9D0 \uBC94\uC704"
+  - "\uADF8\uB9BC\uC790 \uC0C9\uC0C1"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\uCE59\uCE59\uD568 \uD310\uB2E8 \uC870\uC815 \uD30C\uB77C\uBBF8\uD130"
+  - 
+  - "\uB178\uBA40 \uBCF4\uC815"
+  - "\uB178\uBA40 \uBCF4\uC815 \uD30C\uB77C\uBBF8\uD130"
+  - "EX \uCF5C\uB9AC\uB354 \uC0AC\uC6A9"
+  - "EX \uCF5C\uB9AC\uB354\uC758 \uC2A4\uCF00\uC77C\uB9C1 \uACC4\uC218"
+  - "\uC811\uC810 \uBC94\uC704"
+  - "\uC811\uC810 \uBC30\uCE58 \uBC18\uACBD"
+  - "\uC774\uC804 \uC0AC\uC591"
+  - 
+  - "\uACE0\uAE09 \uC124\uC815"
+  - "\uBAA8\uCC0C\uB9AC \uD30C\uB77C\uBBF8\uD1301"
+  - "\uBAA8\uCC0C\uB9AC \uD30C\uB77C\uBBF8\uD1302"
+  - "\uC138\uBD80 \uB9E4\uAC1C\uBCC0\uC2183"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "VRCAvatarDescriptor \uCEF4\uD3EC\uB10C\uD2B8\uAC00 \uC124\uC815\uB41C \uC544\uBC14\uD0C0\uC5D0
+    \uB123\uC5B4\uC8FC\uC138\uC694."
+  - "\uD544\uC694\uD55C \uD328\uD0A4\uC9C0\uB97C \uAC00\uC838\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.
+    \uC124\uBA85\uC11C\uC5D0 \uB530\uB77C \uC784\uD3EC\uD2B8\uD574 \uC8FC\uC138\uC694."
+  - "\uBAA8\uCC0C\uB9AC \uC170\uC774\uB354 \uC124\uBA85\uC11C"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\uC544\uBC14\uD0C0\uC5D0 \uBAA8\uCC0C\uB9AC \uC170\uC774\uB354(\uAD6C\uC2DD)\uAC00
+    \uC124\uC815\uB418\uC5B4 \uC788\uC2B5\uB2C8\uB2E4. \uC124\uBA85\uC11C\uC5D0 \uB530\uB77C
+    \uBAA8\uCC0C\uB9AC \uC170\uC774\uB354\uB97C \uC81C\uAC70\uD574 \uC8FC\uC138\uC694."
+  - "\uD504\uB9AC\uD339\uC744 \uAC00\uC838\uC62C \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - "\uC560\uB2C8\uBA54\uC774\uD130\uB97C \uAC00\uC838\uC62C \uC218 \uC5C6\uC2B5\uB2C8\uB2E4."
+  - "\uB354 \uCD18\uCD18\uD55C \uC170\uC774\uB354\uB97C \uC801\uC6A9\uD558\uC9C0
+    \uBABB\uD588\uC2B5\uB2C8\uB2E4. \uC170\uC774\uB354\uB294 lilToon\uC744 \uC0AC\uC6A9\uD558\uC138\uC694.
+    (PCSS \uB4F1 \uCEE4\uC2A4\uD140 \uC170\uC774\uB354\uC640 \uD568\uAED8 \uC0AC\uC6A9\uD560
+    \uC218 \uC5C6\uC2B5\uB2C8\uB2E4.)"
+  - "\uC170\uC774\uB354 \uC801\uC6A9 \uC704\uCE58\uAC00 \uC124\uC815\uB418\uC5B4
+    \uC788\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. \uD504\uB9AC\uC14B\uC744 \uC120\uD0DD\uD558\uAC70\uB098
+    \uC218\uB3D9\uC73C\uB85C \uC124\uC815\uD574 \uC8FC\uC138\uC694."
+  - "\uBAA8\uCC0C\uB9AC \uC170\uC774\uB354 \uB9C8\uC2A4\uD06C\uC758 MipStreaming\uC774
+    \uAEBC\uC838 \uC788\uC2B5\uB2C8\uB2E4. \uB2E4\uB978 \uB9C8\uC2A4\uD06C\uB97C
+    \uCC38\uACE0\uD558\uC5EC \uC124\uC815\uC744 \uBCC0\uACBD\uD574 \uC8FC\uC138\uC694."
+  - 
+  - 
+  - 
+  - 
+  - "\uCC3D\uC744 \uD1B5\uD55C \uC124\uC815\uC740 \uB354 \uC774\uC0C1 \uC9C0\uC6D0\uD558\uC9C0
+    \uC54A\uC2B5\uB2C8\uB2E4. \uC0C8\uB85C\uC6B4 \uC124\uC815 \uBC29\uBC95\uC740
+    \uB9E4\uB274\uC5BC\uC744 \uCC38\uACE0\uD558\uC138\uC694."
+  - "\uBAA8\uCC0C\uB9AC \uC170\uC774\uB354 \uC124\uBA85\uC11C"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  _texts3:
+  - 
+  - "\u4E2D\u6587"
+  - "\u8BBE\u7F6E\u5927\u5757\u7740\u8272\u5668"
+  - "\u5934\u50CF"
+  - "\u9009\u62E9\u9884\u8BBE\u3002 \u5BF9\u4E8E\u4E0D\u652F\u6301\u7684\u5934\u50CF\uFF0C\u8BF7\u53C2\u9605\u8BF4\u660E\u3002"
+  - "\u9884\u8BBE"
+  - 
+  - 
+  - 
+  - 
+  - "\u7740\u8272\u5668\u5E94\u7528\u70B9 1"
+  - "\u7740\u8272\u5668\u5E94\u7528\u70B9 2"
+  - "\u7740\u8272\u5668\u5E94\u7528\u70B9 3"
+  - "\u7F51\u683C"
+  - "\u8303\u56F4\u906E\u7F69"
+  - "\u6750\u8D28\u69FD\u7F16\u53F7"
+  - "\u7EC6\u5206\uFF08\u9AD8\u8D1F\u8F7D\uFF09"
+  - 
+  - 
+  - 
+  - "\u521A\u5EA6"
+  - "\u6548\u679C\u8303\u56F4"
+  - "\u9634\u5F71\u5F3A\u5EA6"
+  - "\u9634\u5F71\u8303\u56F4"
+  - "\u9634\u5F71\u989C\u8272"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u683C\u8A00\u786E\u5B9A\u8C03\u6574\u53C2\u6570"
+  - 
+  - "\u6B63\u5E38\u4FEE\u6B63"
+  - "\u6B63\u5E38\u4FEE\u6B63\u53C2\u6570"
+  - "EX \u5BF9\u649E\u673A\u4F7F\u7528"
+  - "EX \u5BF9\u649E\u673A\u7F29\u653E\u7CFB\u6570"
+  - "\u89E6\u70B9\u8303\u56F4"
+  - "\u89E6\u70B9\u653E\u7F6E\u534A\u5F84"
+  - "\u65E7\u89C4\u683C"
+  - 
+  - "\u9AD8\u7EA7\u8BBE\u7F6E"
+  - "\u6591\u7EB9\u53C2\u6570 1"
+  - "\u6591\u7EB9\u53C2\u6570 2"
+  - "\u6591\u9A73\u53C2\u6570 3"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u653E\u5165\u5DF2\u8BBE\u7F6E VRCAvatarDescriptor \u7EC4\u4EF6\u7684\u5934\u50CF\u3002"
+  - "\u6240\u9700\u8F6F\u4EF6\u5305\u5C1A\u672A\u5BFC\u5165\u3002 \u8BF7\u6839\u636E\u8BF4\u660E\u5BFC\u5165\u3002"
+  - "Mokuchiri \u7740\u8272\u5668\u8BF4\u660E"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - "\u5934\u50CF\u5DF2\u4F7F\u7528 Mochiri \u7740\u8272\u5668\uFF08\u65E7\u65B9\u6CD5\uFF09\u8BBE\u7F6E\u3002
+    \u8BF7\u6839\u636E\u8BF4\u660E\u79FB\u9664 Mochiri \u7740\u8272\u5668\u3002"
+  - "\u65E0\u6CD5\u83B7\u53D6\u9884\u5236\u4EF6\u3002"
+  - "\u65E0\u6CD5\u83B7\u53D6\u52A8\u753B\u3002"
+  - "\u65E0\u6CD5\u5E94\u7528 Mochiri \u7740\u8272\u5668\u3002 \u4F7F\u7528 lilToon
+    \u7740\u8272\u5668\u3002(\u4E0D\u80FD\u4E0E PCSS \u7B49\u81EA\u5B9A\u4E49\u7740\u8272\u5668\u4E00\u8D77\u4F7F\u7528)"
+  - "\u7740\u8272\u5668\u5E94\u7528\u70B9\u672A\u8BBE\u7F6E\u3002 \u9009\u62E9\u9884\u8BBE\u6216\u624B\u52A8\u8BBE\u7F6E\u3002"
+  - "\u5927\u5757\u7740\u8272\u5668\u906E\u7F69\u7684 MipStreaming \u5DF2\u5173\u95ED\u3002
+    \u8BF7\u53C2\u7167\u5176\u4ED6\u906E\u7F69\u66F4\u6539\u8BBE\u7F6E\u3002"
+  - 
+  - 
+  - 
+  - 
+  - "\u4E0D\u518D\u652F\u6301\u4ECE\u7A97\u53E3\u8FDB\u884C\u8BBE\u7F6E\u3002\u8BF7\u53C2\u9605\u624B\u518C\u4E86\u89E3\u65B0\u7684\u8BBE\u7F6E\u65B9\u6CD5\u3002"
+  - "Motchiri \u7740\u8272\u5668\u624B\u518C"
+  - https://wataame89.github.io/documents-MotchiriShader/intro/
+  _lang: 0
+  _lang_number: 4
+  _isOpen1: 1
+  _isOpen2: 1
+  _isOpen3: 1

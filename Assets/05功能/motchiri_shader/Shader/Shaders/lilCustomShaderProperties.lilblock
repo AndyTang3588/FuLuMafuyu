@@ -1,0 +1,52 @@
+
+        //----------------------------------------------------------------------------------------------------------------------
+        // Custom Properties
+		[Header(Basic Setting)][Space]
+		[NoScaleOffset]
+		_Mask ("Mask", 2D) = "white" {}
+		_effect("effect", range(0.0,1.0))=0.5
+		_strength("strength", range(0.0,1.0))=0.5
+		
+		[Header(AO Setting)][Space]
+		_ao("ao", range(0.0,1.0)) = 0.5
+		_blur("blur", range(0.0,1.0)) = 0.5
+		_color("color", Color) = (0.984,0.855,0.792,1)
+		[Space(30)]
+		
+		[Header(Advanced Setting)][Space]
+		[MaterialToggle]
+		_cancel("cancel",int) = 0
+		[MaterialToggle]
+		_oldver("oldver",int) = 0
+		[MaterialToggle]
+		_multi("multi",int) = 0
+		_depth("depth", float)= 0
+		_func1("func1", float)= 1
+		_func2("func2", float)= 1
+		_func3("func3", float)= 1
+		
+		[MaterialToggle]
+		_normal("normal",int) = 1
+		_nfunc("nfunc", float)= 0.01
+		
+		[MaterialToggle]
+		_excollider("ex",int) = 0
+		_exfactor("factor", float)= 1.0
+
+		_radius("radius", float)= 0.75
+		_unit("unit", float)= 0.05
+		[Space(30)]
+		
+		[Header(System)][Space]
+		_SR("SR", Vector) = (0,0,0,0)
+		_SL("SL", Vector) = (0,0,0,0)
+		_OR("OR", Vector) = (0,0,0,0)
+		_OL("OL", Vector) = (0,0,0,0)
+		_SE1("SE1", Vector) = (0,0,0,0)
+		_SE2("SE2", Vector) = (0,0,0,0)
+		_SE3("SE3", Vector) = (0,0,0,0)
+		_OE1("OE1", Vector) = (0,0,0,0)
+		_OE2("OE2", Vector) = (0,0,0,0)
+		_OE3("OE3", Vector) = (0,0,0,0)
+		_T("T", Vector) = (0,0,0,0)
+		

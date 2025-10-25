@@ -28,42 +28,42 @@ MonoBehaviour:
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Apron_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Shoes_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Shoes_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Loosesocks_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Loosesocks_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: LoosesocksLong_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: LoosesocksLong_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Katyusha_ON
     valueType: 2
     saved: 1
