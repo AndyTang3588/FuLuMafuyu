@@ -573,7 +573,7 @@ MonoBehaviour:
     valueType: 0
     saved: 1
     defaultValue: 1
-    networkSynced: 0
+    networkSynced: 1
   - name: "\u98CE\u683C\u5207\u6362"
     valueType: 2
     saved: 1
@@ -600,21 +600,6 @@ MonoBehaviour:
     defaultValue: 0
     networkSynced: 1
   - name: "\u5934\u53D1_2"
-    valueType: 2
-    saved: 0
-    defaultValue: 0
-    networkSynced: 1
-  - name: "\u8863\u670D_1"
-    valueType: 2
-    saved: 0
-    defaultValue: 0
-    networkSynced: 1
-  - name: "\u8863\u670D_2"
-    valueType: 2
-    saved: 0
-    defaultValue: 0
-    networkSynced: 1
-  - name: "\u8863\u670D_3"
     valueType: 2
     saved: 0
     defaultValue: 0

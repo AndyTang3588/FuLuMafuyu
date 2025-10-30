@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: SPS_M
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: "\u4E0A\u534A\u8EAB/upper body"
+    icon: {fileID: 2800000, guid: 852e60008478fdc4b8b2d8b7f75788e9, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 240b8770ddafc134c80349d16d2d1360, type: 2}
+    subParameters: []
+    labels: []
+  - name: "\u4E0B\u534A\u8EAB/lower body"
+    icon: {fileID: 2800000, guid: a8647e49e49e19d4fa5498790ee068ae, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: ba6e0eb069eaf9240b0cb424f4d2d7e2, type: 2}
+    subParameters: []
+    labels: []

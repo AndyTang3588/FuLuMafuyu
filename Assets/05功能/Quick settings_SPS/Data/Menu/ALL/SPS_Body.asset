@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: SPS_Body
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 11400000, guid: 1cfa9bac46cde30409f84e4b98f4f34f, type: 2}
+  controls:
+  - name: "\u7A74/Pussy/\u81A3"
+    icon: {fileID: 2800000, guid: e90c78b39fb09594bb180f3e6dbbe215, type: 3}
+    type: 102
+    parameter:
+      name: SPS
+    value: 7
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\u5C41\u7A74/Ass/\u304A\u5C3B"
+    icon: {fileID: 2800000, guid: 2825682bf089de940896ca3c6a92386f, type: 3}
+    type: 102
+    parameter:
+      name: SPS
+    value: 9
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\u8DB3\u5E95/soles of feet [L]"
+    icon: {fileID: 2800000, guid: 3dfc673a2c581384eb3dfcbf845e6ecf, type: 3}
+    type: 102
+    parameter:
+      name: SPS
+    value: 5
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\u8DB3\u5E95/soles of feet [R]"
+    icon: {fileID: 2800000, guid: f983c4c9c2eb9f8468605d576f4c6ac8, type: 3}
+    type: 102
+    parameter:
+      name: SPS
+    value: 6
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\u5C4C/dick/\u30DA\u30CB\u30B9"
+    icon: {fileID: 0}
+    type: 102
+    parameter:
+      name: SPS
+    value: 8
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []

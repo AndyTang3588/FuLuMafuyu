@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: TargetMenu
+  m_EditorClassIdentifier: 
+  controls:
+  - name: Scale
+    icon: {fileID: 2800000, guid: 785588a57b376924e9b160efb3d87e82, type: 3}
+    type: 203
+    parameter:
+      name: MetalPipe/Control/ScaleAdjusting
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters:
+    - name: MetalPipe/Control/HeadScale
+    labels: []
+  - name: Grab Right
+    icon: {fileID: 2800000, guid: d9274728601f4214d91377d162a97d54, type: 3}
+    type: 101
+    parameter:
+      name: MetalPipe/Control/GrabHandR
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Reset
+    icon: {fileID: 2800000, guid: cda2b2b3fb89a324cba8338c5345a9fb, type: 3}
+    type: 101
+    parameter:
+      name: MetalPipe/Control/Reset
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Grab Left
+    icon: {fileID: 2800000, guid: 665f7e384db7cdc42a07f85820886769, type: 3}
+    type: 101
+    parameter:
+      name: MetalPipe/Control/GrabHandL
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Local Only
+    icon: {fileID: 2800000, guid: 143952c2ae2613749abe1663d3bb2eee, type: 3}
+    type: 102
+    parameter:
+      name: MetalPipe/Control/LocalOnly
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
