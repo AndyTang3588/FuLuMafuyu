@@ -32,6 +32,9 @@
     },
     "jp.lilxyzw.liltoon": {
       "version": "1.10.2"
+    },
+    "gogoloco": {
+      "version": "1.8.6"
     }
   },
   "locked": {
@@ -96,6 +99,12 @@
     "jp.lilxyzw.liltoon": {
       "version": "1.10.2",
       "dependencies": {}
+    },
+    "gogoloco": {
+      "version": "1.8.6",
+      "dependencies": {
+        "com.vrchat.avatars": ">=3.2.2"
+      }
     }
   }
 }

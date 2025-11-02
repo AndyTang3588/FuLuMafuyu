@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: Main Menu
+  m_EditorClassIdentifier: 
+  Parameters: {fileID: 0}
+  controls:
+  - name: <b>ON/OFF</b>
+    icon: {fileID: 2800000, guid: c854a71129c6a3b4389a54be653e8a5f, type: 3}
+    type: 102
+    parameter:
+      name: pcs/isEnable
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Self-Service
+    icon: {fileID: 2800000, guid: 343a4005765d48148b9b2bae7b27c555, type: 3}
+    type: 102
+    parameter:
+      name: pcs/mode/selfService
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: Options
+    icon: {fileID: 2800000, guid: 0ac167847a17ec848a9a8d2740b07614, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 39380317ca143484baa005967ce90781, type: 2}
+    subParameters: []
+    labels: []
+  - name: Satisfaction
+    icon: {fileID: 2800000, guid: b612404aa4036b241b262297da0b1000, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: b49eb312bb62ce543bbb39a7b5dfe056, type: 2}
+    subParameters: []
+    labels: []
+  - name: Sound & Location
+    icon: {fileID: 2800000, guid: 521fbf9919da4c34b869fbcf5e029173, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: 91dc47f42804da74f9d9bf80d205d6c7, type: 2}
+    subParameters: []
+    labels: []

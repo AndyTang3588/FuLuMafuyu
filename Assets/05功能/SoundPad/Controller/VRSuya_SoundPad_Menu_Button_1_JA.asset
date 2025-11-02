@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -340790334, guid: 67cc4cb7839cd3741b63733d5adf0442, type: 3}
+  m_Name: VRSuya_SoundPad_Menu_Button_1_JA
+  m_EditorClassIdentifier: 
+  controls:
+  - name: "1\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/1
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "2\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/2
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "3\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/3
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "4\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/4
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "5\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/5
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "6\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/6
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "7\u756A"
+    icon: {fileID: 2800000, guid: 4ab407154f5974ef7a3cd9af02c84edc, type: 3}
+    type: 101
+    parameter:
+      name: SoundPad/Button/7
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  - name: "\u6B21\u306E\u30DA\u30FC\u30B8"
+    icon: {fileID: 2800000, guid: b3285227a0b8c428da7c2f6b9720faac, type: 3}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 11400000, guid: f6111e43c7efc934abec9549ccd6d56f, type: 2}
+    subParameters: []
+    labels: []

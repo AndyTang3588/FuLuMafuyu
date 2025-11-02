@@ -68,72 +68,72 @@ MonoBehaviour:
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Katyusha_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Ear_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Ear_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Hairstyle_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Hairstyle_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: HairPattun_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: HairPattun_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: HairShadow_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: HairShadow_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Spats_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Spats_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Highlight_ON
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: Highlight_OFF
     valueType: 2
     saved: 1
     defaultValue: 0
-    networkSynced: 1
+    networkSynced: 0
   - name: BreastSize
     valueType: 1
     saved: 1
@@ -584,23 +584,8 @@ MonoBehaviour:
     saved: 1
     defaultValue: 0
     networkSynced: 1
-  - name: loli
-    valueType: 2
-    saved: 1
-    defaultValue: 0
-    networkSynced: 1
   - name: "\u5934\u53D1"
     valueType: 0
     saved: 1
-    defaultValue: 0
-    networkSynced: 0
-  - name: "\u5934\u53D1_1"
-    valueType: 2
-    saved: 0
-    defaultValue: 0
-    networkSynced: 1
-  - name: "\u5934\u53D1_2"
-    valueType: 2
-    saved: 0
     defaultValue: 0
     networkSynced: 1

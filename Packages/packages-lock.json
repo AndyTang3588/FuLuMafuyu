@@ -229,6 +229,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "gogoloco": {
+      "version": "file:gogoloco",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "jp.lilxyzw.liltoon": {
       "version": "file:jp.lilxyzw.liltoon",
       "depth": 0,
